@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-primary":"#003824","surface":"#0f131b","error-container":"#93000a","surface-dim":"#0f131b","tertiary":"#45dfa4","primary-fixed":"#6ffbbe","on-secondary-fixed-variant":"#004e5c","on-primary-container":"#00422b","on-secondary":"#003640","background":"#0f131b","on-error-container":"#ffdad6","on-tertiary-container":"#00422c","outline-variant":"#3c4a42","error":"#ffb4ab","surface-container-lowest":"#0a0e15","inverse-primary":"#006c49","on-tertiary-fixed-variant":"#005137","tertiary-container":"#00b982","tertiary-fixed":"#68fcbf","on-primary-fixed-variant":"#005236","primary":"#4edea3","inverse-surface":"#dfe2ed","on-surface":"#dfe2ed","secondary":"#4cd7f6","surface-container-high":"#262a32","on-background":"#dfe2ed","primary-fixed-dim":"#4edea3","on-error":"#690005","on-tertiary-fixed":"#002114","secondary-fixed":"#acedff","surface-variant":"#31353d","secondary-container":"#03b5d3","surface-container":"#1c2027","surface-tint":"#4edea3","inverse-on-surface":"#2d3038","surface-container-highest":"#31353d","tertiary-fixed-dim":"#45dfa4","secondary-fixed-dim":"#4cd7f6","surface-bright":"#353941","on-secondary-fixed":"#001f26","outline":"#86948a","on-surface-variant":"#bbcabf","on-primary-fixed":"#002113","on-tertiary":"#003825","on-secondary-container":"#00424e","surface-container-low":"#181c23","primary-container":"#10b981"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-xl":"2rem","grid-margin-mobile":"1rem","space-3xs":"0.125rem","space-3xl":"4rem","space-md":"1rem","grid-gutter":"1.25rem","space-lg":"1.5rem","space-xs":"0.5rem","grid-margin-desktop":"2rem","space-sm":"0.75rem","space-2xs":"0.25rem","space-2xl":"3rem"},fontFamily:{"display-lg":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"code-sm":["JetBrains Mono"],"headline-xl":["Plus Jakarta Sans"],"metric-display":["JetBrains Mono"],"code-xs":["JetBrains Mono"],"body-sm":["Inter"],"body-md":["Inter"],"display-lg-mobile":["Plus Jakarta Sans"],"body-lg":["Inter"],"headline-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"label-caps":["Inter"]},fontSize:{"display-lg":["3rem",{lineHeight:"3.5rem",letterSpacing:"-0.03em",fontWeight:"700"}],"headline-xl-mobile":["1.75rem",{lineHeight:"2.25rem",letterSpacing:"-0.02em",fontWeight:"600"}],"headline-lg":["1.75rem",{lineHeight:"2.25rem",letterSpacing:"-0.02em",fontWeight:"600"}],"code-sm":["0.8125rem",{lineHeight:"1.25rem",letterSpacing:"-0.01em",fontWeight:"500"}],"headline-xl":["2.25rem",{lineHeight:"2.75rem",letterSpacing:"-0.025em",fontWeight:"600"}],"metric-display":["1.875rem",{lineHeight:"2.25rem",letterSpacing:"-0.03em",fontWeight:"700"}],"code-xs":["0.6875rem",{lineHeight:"1rem",letterSpacing:"0.02em",fontWeight:"500"}],"body-sm":["0.75rem",{lineHeight:"1.125rem",letterSpacing:"0.005em",fontWeight:"400"}],"body-md":["0.875rem",{lineHeight:"1.375rem",letterSpacing:"0em",fontWeight:"400"}],"display-lg-mobile":["2rem",{lineHeight:"2.5rem",letterSpacing:"-0.02em",fontWeight:"700"}],"body-lg":["1rem",{lineHeight:"1.5rem",letterSpacing:"-0.005em",fontWeight:"400"}],"headline-md":["1.375rem",{lineHeight:"1.75rem",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-sm":["1.125rem",{lineHeight:"1.5rem",letterSpacing:"-0.01em",fontWeight:"600"}],"label-caps":["0.6875rem",{lineHeight:"0.875rem",letterSpacing:"0.06em",fontWeight:"600"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/85 backdrop-blur-md border-b border-primary/20 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.5)]"><div class="h-20 w-full px-grid-margin-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs"><div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center border border-primary/40 shadow-[0_0_16px_rgba(16,185,129,0.25)]"><span class="material-symbols-outlined text-primary text-[22px]">shield_with_heart</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">AegisClaims</span><span class="font-code-xs text-code-xs text-primary font-semibold tracking-wider uppercase mt-space-3xs">RUET Enterprise</span></div></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-space-2xs rounded-full bg-surface-container-low border border-primary/20"><span class="w-2 h-2 rounded-full bg-primary animate-pulse shadow-[0_0_8px_rgba(78,222,163,0.8)]"></span><span class="font-code-xs text-code-xs text-primary tracking-wide">System Live - Waterfall Audit Compliant</span></div></div><nav class="hidden lg:flex items-center p-space-2xs rounded-lg bg-surface-container-low border border-outline-variant/30 gap-space-2xs" data-active-classes="bg-surface-container-highest text-primary border border-primary/30 shadow-[0_0_12px_rgba(16,185,129,0.15)]"><a aria-current="page" class="px-space-sm py-space-2xs rounded-lg font-body-sm transition-all bg-surface-container-highest text-primary border border-primary/30 shadow-[0_0_12px_rgba(16,185,129,0.15)]" data-path="policyholder-portal" href="#">Alice Johnson (Policyholder)</a><a class="px-space-sm py-space-2xs rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="examiner-claims-desk" href="#">Charlie Adjuster (Examiner)</a><a class="px-space-sm py-space-2xs rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="executive-treasury-surveillance" href="#">Dana Admin (Executive Governance)</a></nav><div class="flex items-center gap-space-md"><div class="relative hidden md:block"><span class="material-symbols-outlined absolute left-space-sm top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span><input class="w-56 lg:w-64 pl-9 pr-space-sm py-space-2xs rounded-md bg-surface-container text-on-surface placeholder-on-surface-variant font-code-sm text-code-sm border border-outline-variant/40 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Search claim, hash, policy..." type="text"/></div><button class="relative p-space-xs rounded-md bg-surface-container-low border border-outline-variant/30 text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></button><div class="flex items-center pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-20 bg-background relative min-h-screen"><div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(16,185,129,0.08),transparent_65%)] pointer-events-none"></div><div class="relative z-10 w-full px-grid-margin-desktop"><div class="flex flex-col w-full pb-space-3xl">
+<!-- Contextual Breadcrumbs & Title Bar -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pt-space-md mb-space-xl">
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-code-xs text-code-xs">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+<span>Coverage ID #RUET-POL-8819</span>
+</a>
+<span>/</span>
+<span class="text-on-surface">Active Adjudication</span>
+<span>/</span>
+<span class="text-primary font-semibold">CLM-1001</span>
+</div>
+<div class="flex items-baseline gap-space-sm mt-space-3xs">
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Front-end Collision Adjudication</h1>
+<span class="px-space-xs py-space-3xs rounded-full bg-secondary/10 text-secondary font-code-xs text-code-xs font-semibold tracking-wider uppercase flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>
+          Stage 2: Live Processing
+        </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">2023 Honda Civic Sedan AWD • Policyholder: Alice Johnson • Incident: Urban intersection low-velocity impact</p>
+</div>
+<!-- Assigned Examiner Card & Direct Contact Drawer Trigger -->
+<div class="flex items-center gap-space-md p-space-sm bg-surface-container rounded-xl shadow-lg relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-primary/5 rounded-full blur-xl pointer-events-none"></div>
+<div class="relative">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary font-headline-md text-headline-md font-bold shadow-sm">
+          CA
+        </div>
+<span class="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full bg-primary ring-2 ring-surface-container"></span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-2xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Charlie Adjuster</span>
+<span class="px-space-2xs py-space-3xs rounded bg-surface-container-highest text-on-surface-variant font-code-xs text-code-xs">RUET-EX-402</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-code-xs text-code-xs mt-space-3xs">
+<span class="material-symbols-outlined text-primary text-[14px]">timer</span>
+<span>SLA Target: &lt; 24h</span>
+<span>•</span>
+<span class="text-primary font-medium">99.4% On-Time</span>
+</div>
+</div>
+<button class="ml-space-xs px-space-md py-space-xs rounded-lg bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:bg-tertiary transition-all shadow-[0_0_16px_rgba(78,222,163,0.35)] flex items-center gap-space-2xs" id="openMessagingDrawer" type="button">
+<span class="material-symbols-outlined text-[18px]">forum</span>
+<span>Secure Channel</span>
+</button>
+</div>
+</div>
+<!-- Hero Illuminated 4-Stage Horizontal Progression Pipeline -->
+<div class="w-full bg-surface-container-low rounded-xl p-space-lg mb-space-2xl shadow-xl relative overflow-hidden">
+<div class="absolute -top-16 left-1/4 w-96 h-40 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-16 right-1/4 w-96 h-40 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex items-center justify-between mb-space-lg">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">waterfall_chart</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Algorithmic Lifecycle Pipeline</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant ml-space-xs">Automated State Engine v4.8</span>
+</div>
+<div class="hidden sm:flex items-center gap-space-xs text-on-surface-variant font-code-xs text-code-xs">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span>Cryptographic State Ledger Synced: 0x9f1a...43bc</span>
+</div>
+</div>
+<!-- Stepper Track & Nodes -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md relative">
+<!-- Stage 1: Submitted -->
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container shadow-md relative group">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="w-10 h-10 rounded-lg bg-primary/20 text-primary flex items-center justify-center font-bold shadow-[0_0_12px_rgba(78,222,163,0.25)]">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</div>
+<span class="font-code-xs text-code-xs text-primary font-semibold">STAGE 01</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">1. Submitted</div>
+<p class="font-body-sm text-body-sm text-primary mt-space-3xs flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span> Completed Mar 28, 14:20 BST
+        </p>
+<span class="font-code-xs text-code-xs text-on-surface-variant mt-space-xs">Telematics &amp; Dashcam Upload Validated</span>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-space-md overflow-hidden">
+<div class="bg-primary h-full w-full rounded-full"></div>
+</div>
+</div>
+<!-- Stage 2: Under Review (ACTIVE) -->
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-high shadow-2xl relative overflow-hidden ring-1 ring-secondary/50">
+<div class="absolute -top-12 -right-12 w-28 h-28 bg-secondary/20 rounded-full blur-2xl animate-pulse"></div>
+<div class="flex items-center justify-between mb-space-sm relative z-10">
+<div class="w-10 h-10 rounded-lg bg-secondary/20 text-secondary flex items-center justify-center font-bold shadow-[0_0_16px_rgba(76,215,246,0.5)]">
+<span class="material-symbols-outlined text-[22px] animate-spin">sync</span>
+</div>
+<span class="px-space-xs py-space-3xs rounded-full bg-secondary/20 text-secondary font-code-xs text-code-xs font-semibold tracking-wider animate-pulse">
+            CURRENT STAGE
+          </span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface relative z-10">2. Under Review</div>
+<p class="font-body-sm text-body-sm text-secondary mt-space-3xs font-medium relative z-10">
+          In Adjudication Studio
+        </p>
+<div class="flex items-center gap-1 text-on-surface font-code-xs text-code-xs mt-space-2xs relative z-10">
+<span class="material-symbols-outlined text-primary text-[14px]">psychology</span>
+<span>Computer Vision Passed (Confidence 98.7%)</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full mt-space-md overflow-hidden relative z-10">
+<div class="bg-secondary h-full w-3/4 rounded-full shadow-[0_0_8px_rgba(76,215,246,0.8)]"></div>
+</div>
+</div>
+<!-- Stage 3: Approved -->
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container opacity-85 shadow-md relative">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest text-on-surface-variant flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[20px]">assignment_turned_in</span>
+</div>
+<span class="font-code-xs text-code-xs text-on-surface-variant">STAGE 03</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">3. Approved</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-3xs">
+          Pending Adjuster Sign-off
+        </p>
+<div class="font-code-xs text-code-xs text-primary mt-space-2xs font-semibold">
+          Est: $2,000 net ($500 deductible applied)
+        </div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-space-md overflow-hidden">
+<div class="bg-primary/20 h-full w-0 rounded-full"></div>
+</div>
+</div>
+<!-- Stage 4: Settled -->
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container opacity-70 shadow-md relative">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest text-on-surface-variant flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+</div>
+<span class="font-code-xs text-code-xs text-on-surface-variant">STAGE 04</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">4. Settled</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-3xs">
+          Treasury Direct Deposit
+        </p>
+<span class="font-code-xs text-code-xs text-on-surface-variant mt-space-2xs">ACH/Wire Auto-Disbursement Ready</span>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-space-md overflow-hidden">
+<div class="bg-primary/20 h-full w-0 rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- 3-Column Detailed Information Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg w-full">
+<!-- LEFT PANEL: Submitted Claim Summary & Telemetry (Cols 1-4) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Incident & Telemetry Card -->
+<div class="p-space-lg bg-surface-container-low rounded-xl shadow-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">speed</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Incident Telemetry</span>
+</div>
+<span class="font-code-xs text-code-xs text-primary px-space-xs py-space-3xs rounded bg-primary/10">CAN-Bus Sync</span>
+</div>
+<!-- Vehicle Image Context -->
+<div class="relative w-full h-44 rounded-lg overflow-hidden bg-surface-container-highest group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A modern metallic dark grey 2023 Honda Civic sedan with bumper cosmetic damage parked in a diagnostic appraisal laboratory under high-tech overhead soft teal fluorescent lighting, cinematic deep tones, high fidelity photograph" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVk4tCSbUY6QWMtKvkPYVvylDfG6n7PQDTGpebc0j55URd-TmDLSV1rkFL4S79TaCI_DYOThJMkH5eWHRuZiDt1sB0ZJ06pradHsb_2lhEHh5bdYD9FxC4ACDu_TRU_GXyzvaTFcbpDvy95dfoJqBKrR1wNNaKAJnwWG0oOZUb4tWNwa2KARJEF2AykjaWWTzUATpm0SN-8H4PfHIx1cBFG7dhORxuOhrYU1c6L2EnAu6U3T0QAFxJKA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<div class="absolute bottom-2 left-3 right-3 flex items-center justify-between text-on-surface font-code-xs text-code-xs">
+<span class="bg-surface-container-lowest/80 backdrop-blur px-2 py-0.5 rounded">VIN: 2HGFC2F63PH091823</span>
+<span class="bg-surface-container-lowest/80 backdrop-blur px-2 py-0.5 rounded text-secondary">Sensor Hash Valid</span>
+</div>
+</div>
+<!-- Key Metrics Display -->
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col">
+<span class="font-code-xs text-code-xs text-on-surface-variant uppercase">Impact Velocity</span>
+<span class="font-metric-display text-metric-display text-primary mt-space-3xs">12.4 <span class="text-body-sm font-normal text-on-surface-variant">km/h</span></span>
+<span class="font-code-xs text-code-xs text-on-surface-variant mt-1">Delta-V: -3.8 m/s²</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col">
+<span class="font-code-xs text-code-xs text-on-surface-variant uppercase">Airbag Deployment</span>
+<span class="font-metric-display text-metric-display text-on-surface mt-space-3xs">None <span class="text-body-sm font-normal text-primary">(Nominal)</span></span>
+<span class="font-code-xs text-code-xs text-on-surface-variant mt-1">Threshold unmet (safe)</span>
+</div>
+</div>
+<!-- Crash Pulse Telemetry Inline SVG Sparkline -->
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-space-2xs">
+<div class="flex items-center justify-between font-code-xs text-code-xs text-on-surface-variant">
+<span>Deceleration Waveform (X-Axis)</span>
+<span class="text-secondary">Peak: 140ms</span>
+</div>
+<div class="w-full h-16 relative">
+<svg class="w-full h-full text-secondary" fill="none" preserveaspectratio="none" viewbox="0 0 300 60">
+<path d="M0,30 L60,30 L90,29 L110,32 L130,28 L140,5 L145,55 L150,18 L155,42 L160,26 L170,33 L190,30 L300,30" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M0,30 L60,30 L90,29 L110,32 L130,28 L140,5 L145,55 L150,18 L155,42 L160,26 L170,33 L190,30 L300,30 L300,60 L0,60 Z" fill="currentColor" fill-opacity="0.08"></path>
+</svg>
+</div>
+<div class="flex justify-between font-code-xs text-code-xs text-on-surface-variant/70">
+<span>0 ms (T0)</span>
+<span>+150 ms Impact</span>
+<span>+500 ms Settle</span>
+</div>
+</div>
+<!-- Files Uploaded -->
+<div class="flex flex-col gap-space-2xs">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Submitted Evidentiary Artifacts</span>
+<div class="flex items-center justify-between p-space-xs rounded bg-surface-container hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">videocam</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface">Front_Dashcam_Clip_048.mp4</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">42.8 MB • SHA-256 Verified</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[18px]">check</span>
+</div>
+<div class="flex items-center justify-between p-space-xs rounded bg-surface-container hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">description</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface">Police_Report_PR-99201.pdf</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">1.4 MB • Metropolitan Police Service</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[18px]">check</span>
+</div>
+</div>
+</div>
+</div>
+<!-- CENTER PANEL: Dynamic Status Log & Examiner Feed (Cols 5-8) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<div class="p-space-lg bg-surface-container-low rounded-xl shadow-lg flex flex-col h-full">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">dynamic_feed</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Adjudication Audit Trail</span>
+</div>
+<span class="px-space-xs py-space-3xs rounded-full bg-surface-container-high text-on-surface-variant font-code-xs text-code-xs">
+            Live Streaming
+          </span>
+</div>
+<!-- Vertical Timeline Feed -->
+<div class="relative pl-space-md space-y-space-md flex-1">
+<!-- Timeline stem -->
+<div class="absolute left-2.5 top-3 bottom-3 w-0.5 bg-surface-container-highest"></div>
+<!-- Item 1 (Active/Latest) -->
+<div class="relative flex items-start gap-space-sm group">
+<div class="w-5 h-5 rounded-full bg-secondary flex items-center justify-center -ml-[1.4rem] mt-1 shadow-[0_0_8px_rgba(76,215,246,0.8)] z-10 ring-4 ring-surface-container-low">
+<span class="material-symbols-outlined text-on-secondary text-[12px] font-bold">memory</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex-1 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm font-semibold text-secondary">AI Vision Adjudication Passed</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">15:02 BST Today</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs">
+                Convolutional neural model verified front bumper fascia fracturing, minor grille displacement, and sensor bracket fracture. No internal radiator puncture detected. Damage alignment matches 12.4 km/h telemetry velocity profile.
+              </p>
+<div class="mt-space-xs flex items-center gap-space-xs font-code-xs text-code-xs text-primary">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span>
+<span>Subrogation probability: 0% (Single-vehicle bollard contact)</span>
+</div>
+</div>
+</div>
+<!-- Item 2 (Examiner Review) -->
+<div class="relative flex items-start gap-space-sm group">
+<div class="w-5 h-5 rounded-full bg-primary flex items-center justify-center -ml-[1.4rem] mt-1 shadow-sm z-10 ring-4 ring-surface-container-low">
+<span class="material-symbols-outlined text-on-primary text-[12px] font-bold">person</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex-1 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Examiner Charlie Adjuster</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">14:48 BST Today</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface mt-space-2xs italic">
+                “Claim file CLM-1001 picked up for accelerated review. Policyholder comprehensive coverage is fully active under Policy #RUET-POL-8819 with a $500 standard deductible. Telemetry and dashcam timestamps cross-match accurately.”
+              </p>
+</div>
+</div>
+<!-- Item 3 (Initial Submission) -->
+<div class="relative flex items-start gap-space-sm group">
+<div class="w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center -ml-[1.4rem] mt-1 text-on-surface-variant z-10 ring-4 ring-surface-container-low">
+<span class="material-symbols-outlined text-[12px]">upload_file</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex-1 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Claim First Notice of Loss (FNOL) Filed</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">14:20 BST Today</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs">
+                Alice Johnson completed digital incident intake via Aegis Mobile. GPS coordinates confirmed 51.5074° N, 0.1278° W. Automated cryptographic timestamp registered on RUET ledger block #8,102,941.
+              </p>
+</div>
+</div>
+</div>
+<!-- Real-Time Feed Status bar -->
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-on-surface-variant font-code-xs text-code-xs">
+<span class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            Listening for Examiner Ledger Commits
+          </span>
+<span class="text-on-surface-variant/60">Poll interval: 3.5s</span>
+</div>
+</div>
+</div>
+<!-- RIGHT PANEL: Policyholder Action Card & Next Steps (Cols 9-12) -->
+<div class="lg:col-span-3 flex flex-col gap-space-md">
+<!-- Settlement Estimate Preview Card -->
+<div class="p-space-lg bg-surface-container-low rounded-xl shadow-lg flex flex-col gap-space-sm relative overflow-hidden">
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-primary/10 rounded-full blur-2xl pointer-events-none"></div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Appraisal Breakdown</span>
+<div class="space-y-space-2xs mt-space-2xs">
+<div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>OEM Parts &amp; Assembly</span>
+<span class="font-code-sm text-code-sm text-on-surface">$1,850.00</span>
+</div>
+<div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Specialist Labor (3.5 hrs)</span>
+<span class="font-code-sm text-code-sm text-on-surface">$450.00</span>
+</div>
+<div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Paint &amp; Sensor Recalibration</span>
+<span class="font-code-sm text-code-sm text-on-surface">$200.00</span>
+</div>
+<div class="flex justify-between font-body-sm text-body-sm text-error">
+<span>Policy Deductible</span>
+<span class="font-code-sm text-code-sm">-$500.00</span>
+</div>
+<div class="pt-space-xs flex justify-between items-baseline font-headline-sm text-headline-sm text-primary">
+<span>Expected Payout</span>
+<span class="font-metric-display text-metric-display text-primary">$2,000.00</span>
+</div>
+</div>
+</div>
+<!-- Action Card -->
+<div class="p-space-lg bg-surface-container-low rounded-xl shadow-lg flex flex-col gap-space-md">
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Required Actions</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-3xs">
+            Expedite final sign-off by choosing an available lifecycle action below.
+          </p>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Action 1 -->
+<button class="w-full p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high transition-all text-left flex items-start gap-space-sm group" id="uploadDocBtn" type="button">
+<div class="p-space-xs rounded bg-surface-container-highest text-secondary group-hover:bg-secondary group-hover:text-on-secondary transition-colors">
+<span class="material-symbols-outlined text-[20px]">add_a_photo</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface group-hover:text-primary transition-colors">Upload Supplementary Documents</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">Receipts, repair invoices, or supplemental photos</span>
+</div>
+</button>
+<!-- Action 2 -->
+<button class="w-full p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high transition-all text-left flex items-start gap-space-sm group" id="scheduleInspectBtn" type="button">
+<div class="p-space-xs rounded bg-surface-container-highest text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">calendar_month</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface group-hover:text-primary transition-colors">Schedule Authorized Inspection</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">Select pre-approved OEM Body Center slot</span>
+</div>
+</button>
+<!-- Action 3 -->
+<button class="w-full p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high transition-all text-left flex items-start gap-space-sm group" id="contactAdjusterBtn" type="button">
+<div class="p-space-xs rounded bg-surface-container-highest text-on-surface-variant group-hover:bg-on-surface group-hover:text-surface transition-colors">
+<span class="material-symbols-outlined text-[20px]">contact_phone</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface group-hover:text-primary transition-colors">Contact Assigned Adjuster</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">Charlie Adjuster • Ext. 402 or Voice Session</span>
+</div>
+</button>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest text-on-surface-variant font-code-xs text-code-xs flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[16px]">verified_user</span>
+<span>Aegis Automated Guarantee: Under 24h payout promise once Stage 3 clears.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Hidden Supplementary Document Upload Modal Sheet -->
+<div class="fixed inset-0 z-50 bg-surface-container-lowest/80 backdrop-blur-md hidden items-center justify-center p-space-md" id="uploadModal">
+<div class="bg-surface-container-low max-w-lg w-full rounded-xl p-space-xl shadow-2xl relative flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[24px]">cloud_upload</span>
+<span class="font-headline-md text-headline-md text-on-surface">Upload Evidentiary Files</span>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface" id="closeUploadModal">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Files are automatically encrypted with AES-256 and verified through the RUET zero-knowledge tamper registry.
+      </p>
+<div class="p-space-xl bg-surface-container rounded-lg flex flex-col items-center justify-center text-center cursor-pointer hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-secondary text-[40px] mb-space-xs">upload_file</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface">Drag &amp; drop supplementary files</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant mt-space-2xs">PDF, JPEG, PNG, MP4 up to 500MB</span>
+</div>
+<div class="flex justify-end gap-space-sm mt-space-xs">
+<button class="px-space-md py-space-xs rounded-lg bg-surface-container-high text-on-surface font-body-sm text-body-sm hover:bg-surface-bright transition-colors" id="cancelModalBtn" type="button">Cancel</button>
+<button class="px-space-md py-space-xs rounded-lg bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:bg-tertiary transition-all shadow-md" id="confirmUploadBtn" type="button">Submit Files</button>
+</div>
+</div>
+</div>
+<!-- Instant Messaging Drawer (Flyout) -->
+<div class="fixed top-0 right-0 h-full w-full sm:w-96 bg-surface-container-low z-50 shadow-2xl translate-x-full transition-transform duration-300 ease-out flex flex-col" id="messagingDrawer">
+<!-- Header -->
+<div class="p-space-md bg-surface-container-high flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary/20 text-primary flex items-center justify-center font-bold text-sm">
+          CA
+        </div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Charlie Adjuster</span>
+<span class="font-code-xs text-code-xs text-primary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Online • Direct Secure Channel
+          </span>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface" id="closeMessagingDrawer">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Messages Body -->
+<div class="flex-1 p-space-md overflow-y-auto space-y-space-sm" id="chatMessages">
+<div class="p-space-xs rounded bg-surface-container text-center font-code-xs text-code-xs text-on-surface-variant">
+<span>Channel encrypted with Adjuster RUET-EX-402</span>
+</div>
+<!-- Message from Examiner -->
+<div class="flex flex-col items-start gap-1 max-w-[85%]">
+<span class="font-code-xs text-code-xs text-on-surface-variant">Charlie Adjuster • 14:50 BST</span>
+<div class="p-space-sm rounded-lg bg-surface-container-high text-on-surface font-body-sm text-body-sm">
+          Hello Alice, I have received the CAN-bus pulse data. The 12.4 km/h speed profile confirms minor bumper deflection. The AI computer vision has completed its baseline appraisal.
+        </div>
+</div>
+<!-- Message from Policyholder -->
+<div class="flex flex-col items-end gap-1 ml-auto max-w-[85%]">
+<span class="font-code-xs text-code-xs text-on-surface-variant">You • 14:55 BST</span>
+<div class="p-space-sm rounded-lg bg-primary text-on-primary font-body-sm text-body-sm">
+          Thank you Charlie! Will this impact my no-claims discount if the deductible is applied?
+        </div>
+</div>
+<!-- Examiner Reply -->
+<div class="flex flex-col items-start gap-1 max-w-[85%]">
+<span class="font-code-xs text-code-xs text-on-surface-variant">Charlie Adjuster • 14:58 BST</span>
+<div class="p-space-sm rounded-lg bg-surface-container-high text-on-surface font-body-sm text-body-sm">
+          Your Aegis Protec Tier includes first-event no-claims protection. The $500 deductible is the only deduction from the total authorized estimate of $2,500.
+        </div>
+</div>
+</div>
+<!-- Message Input Bar -->
+<div class="p-space-md bg-surface-container flex items-center gap-space-xs">
+<input class="flex-1 px-space-sm py-space-xs rounded-md bg-surface-container-high text-on-surface placeholder-on-surface-variant font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary" id="chatInput" placeholder="Type encrypted message..." type="text"/>
+<button class="p-space-xs rounded-md bg-primary text-on-primary hover:bg-tertiary transition-colors" id="sendChatBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  // Simple micro-interactions for instant messaging drawer and modal
+  const messagingDrawer = document.getElementById('messagingDrawer');
+  const openDrawerBtn = document.getElementById('openMessagingDrawer');
+  const closeDrawerBtn = document.getElementById('closeMessagingDrawer');
+  const contactAdjusterBtn = document.getElementById('contactAdjusterBtn');
+
+  function toggleDrawer(open) {
+    if (open) {
+      messagingDrawer.classList.remove('translate-x-full');
+    } else {
+      messagingDrawer.classList.add('translate-x-full');
+    }
+  }
+
+  if (openDrawerBtn) openDrawerBtn.addEventListener('click', () => toggleDrawer(true));
+  if (closeDrawerBtn) closeDrawerBtn.addEventListener('click', () => toggleDrawer(false));
+  if (contactAdjusterBtn) contactAdjusterBtn.addEventListener('click', () => toggleDrawer(true));
+
+  // Chat message sending simulation
+  const chatInput = document.getElementById('chatInput');
+  const sendChatBtn = document.getElementById('sendChatBtn');
+  const chatMessages = document.getElementById('chatMessages');
+
+  function sendMessage() {
+    const text = chatInput.value.trim();
+    if (!text) return;
+    
+    const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    const msgHTML = `
+      <div class="flex flex-col items-end gap-1 ml-auto max-w-[85%]">
+        <span class="font-code-xs text-code-xs text-on-surface-variant">You &bull; ${time} BST</span>
+        <div class="p-space-sm rounded-lg bg-primary text-on-primary font-body-sm text-body-sm">
+          ${text}
+        </div>
+      </div>
+    `;
+    chatMessages.insertAdjacentHTML('beforeend', msgHTML);
+    chatInput.value = '';
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+
+    // Simulated Auto-response after 1.5s
+    setTimeout(() => {
+      const respHTML = `
+        <div class="flex flex-col items-start gap-1 max-w-[85%]">
+          <span class="font-code-xs text-code-xs text-on-surface-variant">Charlie Adjuster &bull; Just now</span>
+          <div class="p-space-sm rounded-lg bg-surface-container-high text-on-surface font-body-sm text-body-sm">
+            Noted Alice. I will update your claim ledger commit momentarily.
+          </div>
+        </div>
+      `;
+      chatMessages.insertAdjacentHTML('beforeend', respHTML);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }, 1200);
+  }
+
+  if (sendChatBtn && chatInput) {
+    sendChatBtn.addEventListener('click', sendMessage);
+    chatInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') sendMessage();
+    });
+  }
+
+  // Upload modal interaction
+  const uploadDocBtn = document.getElementById('uploadDocBtn');
+  const uploadModal = document.getElementById('uploadModal');
+  const closeUploadModal = document.getElementById('closeUploadModal');
+  const cancelModalBtn = document.getElementById('cancelModalBtn');
+  const confirmUploadBtn = document.getElementById('confirmUploadBtn');
+
+  function toggleUploadModal(show) {
+    if (show) {
+      uploadModal.classList.remove('hidden');
+      uploadModal.classList.add('flex');
+    } else {
+      uploadModal.classList.add('hidden');
+      uploadModal.classList.remove('flex');
+    }
+  }
+
+  if (uploadDocBtn) uploadDocBtn.addEventListener('click', () => toggleUploadModal(true));
+  if (closeUploadModal) closeUploadModal.addEventListener('click', () => toggleUploadModal(false));
+  if (cancelModalBtn) cancelModalBtn.addEventListener('click', () => toggleUploadModal(false));
+  if (confirmUploadBtn) confirmUploadBtn.addEventListener('click', () => {
+    alert('Files cryptographically queued for SHA-256 ledger verification.');
+    toggleUploadModal(false);
+  });
+
+  // Inspection button feedback
+  const scheduleInspectBtn = document.getElementById('scheduleInspectBtn');
+  if (scheduleInspectBtn) {
+    scheduleInspectBtn.addEventListener('click', () => {
+      alert('Routing to Honda Certified Collision Repair Scheduling Center...');
+    });
+  }
+</script></div></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/20 py-space-lg mt-space-3xl"><div class="w-full px-grid-margin-desktop flex flex-col md:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-code-xs text-code-xs"><span>RUET Enterprise Insurance Lifecycle Architecture • ISO/IEC 27001 &amp; SOC-2 Type II Certified</span><span>© 2025 AegisClaims Systems Inc. All waterfall transactions cryptographic ledger verified.</span></div></footer></body></html>

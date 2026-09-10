@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main > :first-child{margin-top:0 !important;}main > :last-child{margin-bottom:0 !important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "on-secondary-fixed": "#001f26",
+        "background": "#0f131b",
+        "surface-dim": "#0f131b",
+        "surface-bright": "#353941",
+        "outline-variant": "#3c4a42",
+        "surface-container-lowest": "#0a0e15",
+        "surface": "#0f131b",
+        "on-tertiary": "#003825",
+        "surface-container": "#1c2027",
+        "surface-container-highest": "#31353d",
+        "on-surface-variant": "#bbcabf",
+        "tertiary-fixed-dim": "#45dfa4",
+        "secondary-fixed": "#acedff",
+        "surface-tint": "#4edea3",
+        "on-secondary-fixed-variant": "#004e5c",
+        "on-primary-fixed-variant": "#005236",
+        "outline": "#86948a",
+        "on-tertiary-fixed-variant": "#005137",
+        "primary": "#4edea3",
+        "primary-fixed-dim": "#4edea3",
+        "on-secondary": "#003640",
+        "secondary-container": "#03b5d3",
+        "inverse-surface": "#dfe2ed",
+        "inverse-primary": "#006c49",
+        "on-primary-fixed": "#002113",
+        "on-primary-container": "#00422b",
+        "surface-container-low": "#181c23",
+        "on-surface": "#dfe2ed",
+        "inverse-on-surface": "#2d3038",
+        "tertiary-container": "#00b982",
+        "surface-variant": "#31353d",
+        "tertiary-fixed": "#68fcbf",
+        "secondary-fixed-dim": "#4cd7f6",
+        "on-error-container": "#ffdad6",
+        "primary-fixed": "#6ffbbe",
+        "surface-container-high": "#262a32",
+        "error-container": "#93000a",
+        "on-primary": "#003824",
+        "on-background": "#dfe2ed",
+        "primary-container": "#10b981",
+        "error": "#ffb4ab",
+        "on-secondary-container": "#00424e",
+        "on-error": "#690005",
+        "secondary": "#4cd7f6",
+        "on-tertiary-fixed": "#002114",
+        "on-tertiary-container": "#00422c",
+        "tertiary": "#45dfa4"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.125rem",
+        "lg": "0.25rem",
+        "xl": "0.5rem",
+        "full": "0.75rem"
+      },
+      "spacing": {
+        "space-xl": "2rem",
+        "space-xs": "0.5rem",
+        "space-2xl": "3rem",
+        "space-sm": "0.75rem",
+        "space-3xl": "4rem",
+        "space-lg": "1.5rem",
+        "space-2xs": "0.25rem",
+        "space-md": "1rem",
+        "grid-margin-mobile": "1rem",
+        "space-3xs": "0.125rem",
+        "grid-margin-desktop": "2rem",
+        "grid-gutter": "1.25rem"
+      },
+      "fontFamily": {
+        "body-md": [
+          "Inter"
+        ],
+        "headline-xl": [
+          "Plus Jakarta Sans"
+        ],
+        "display-lg": [
+          "Plus Jakarta Sans"
+        ],
+        "code-xs": [
+          "JetBrains Mono"
+        ],
+        "metric-display": [
+          "JetBrains Mono"
+        ],
+        "code-sm": [
+          "JetBrains Mono"
+        ],
+        "headline-sm": [
+          "Plus Jakarta Sans"
+        ],
+        "body-sm": [
+          "Inter"
+        ],
+        "display-lg-mobile": [
+          "Plus Jakarta Sans"
+        ],
+        "headline-lg": [
+          "Plus Jakarta Sans"
+        ],
+        "headline-md": [
+          "Plus Jakarta Sans"
+        ],
+        "headline-xl-mobile": [
+          "Plus Jakarta Sans"
+        ],
+        "label-caps": [
+          "Inter"
+        ],
+        "body-lg": [
+          "Inter"
+        ]
+      },
+      "fontSize": {
+        "body-md": [
+          "0.875rem",
+          {
+            "lineHeight": "1.375rem",
+            "letterSpacing": "0em",
+            "fontWeight": "400"
+          }
+        ],
+        "headline-xl": [
+          "2.25rem",
+          {
+            "lineHeight": "2.75rem",
+            "letterSpacing": "-0.025em",
+            "fontWeight": "600"
+          }
+        ],
+        "display-lg": [
+          "3rem",
+          {
+            "lineHeight": "3.5rem",
+            "letterSpacing": "-0.03em",
+            "fontWeight": "700"
+          }
+        ],
+        "code-xs": [
+          "0.6875rem",
+          {
+            "lineHeight": "1rem",
+            "letterSpacing": "0.02em",
+            "fontWeight": "500"
+          }
+        ],
+        "metric-display": [
+          "1.875rem",
+          {
+            "lineHeight": "2.25rem",
+            "letterSpacing": "-0.03em",
+            "fontWeight": "700"
+          }
+        ],
+        "code-sm": [
+          "0.8125rem",
+          {
+            "lineHeight": "1.25rem",
+            "letterSpacing": "-0.01em",
+            "fontWeight": "500"
+          }
+        ],
+        "headline-sm": [
+          "1.125rem",
+          {
+            "lineHeight": "1.5rem",
+            "letterSpacing": "-0.01em",
+            "fontWeight": "600"
+          }
+        ],
+        "body-sm": [
+          "0.75rem",
+          {
+            "lineHeight": "1.125rem",
+            "letterSpacing": "0.005em",
+            "fontWeight": "400"
+          }
+        ],
+        "display-lg-mobile": [
+          "2rem",
+          {
+            "lineHeight": "2.5rem",
+            "letterSpacing": "-0.02em",
+            "fontWeight": "700"
+          }
+        ],
+        "headline-lg": [
+          "1.75rem",
+          {
+            "lineHeight": "2.25rem",
+            "letterSpacing": "-0.02em",
+            "fontWeight": "600"
+          }
+        ],
+        "headline-md": [
+          "1.375rem",
+          {
+            "lineHeight": "1.75rem",
+            "letterSpacing": "-0.015em",
+            "fontWeight": "600"
+          }
+        ],
+        "headline-xl-mobile": [
+          "1.75rem",
+          {
+            "lineHeight": "2.25rem",
+            "letterSpacing": "-0.02em",
+            "fontWeight": "600"
+          }
+        ],
+        "label-caps": [
+          "0.6875rem",
+          {
+            "lineHeight": "0.875rem",
+            "letterSpacing": "0.06em",
+            "fontWeight": "600"
+          }
+        ],
+        "body-lg": [
+          "1rem",
+          {
+            "lineHeight": "1.5rem",
+            "letterSpacing": "-0.005em",
+            "fontWeight": "400"
+          }
+        ]
+      }
+    }
+  }
+}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-16 w-full px-grid-margin-desktop flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-xl"><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[20px]">verified_user</span></div><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase">Aegis<span class="text-primary">Claims</span></span></div><div class="hidden lg:flex items-center gap-space-2xs px-space-xs py-space-3xs rounded bg-surface-container-high"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-code-xs text-code-xs text-on-surface uppercase tracking-wider">Settlement Engine Active</span></div></div><nav class="hidden md:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-medium rounded"><a class="px-space-sm py-space-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="claim-details" href="#">Claim Overview</a><a aria-current="page" class="px-space-sm py-space-2xs transition-colors bg-primary-container text-on-primary-container font-medium rounded" data-path="amend-claim-modal" href="#">Amend Flow</a><a class="px-space-sm py-space-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="withdraw-claim-dialog" href="#">Withdrawal Flow</a><a class="px-space-sm py-space-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="audit-telemetry" href="#">Audit Telemetry</a></nav><div class="flex items-center gap-space-md"><div class="hidden sm:flex flex-col items-end"><span class="font-body-sm text-body-sm text-on-surface font-semibold">Alice Johnson</span><span class="font-code-xs text-code-xs text-on-surface-variant">Tier-3 Adjuster • ID #AJ-9412</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-background"><div class="flex flex-col w-full">
+<section class="relative w-full overflow-hidden px-grid-margin-desktop py-space-xl">
+<div class="absolute top-10 left-1/4 w-96 h-96 bg-secondary-container/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute bottom-10 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-1/2 right-12 w-64 h-64 bg-error/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="w-full max-w-[1480px] mx-auto flex flex-col gap-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md pb-space-xs">
+<div>
+<div class="flex items-center gap-space-xs mb-space-2xs">
+<span class="inline-flex items-center justify-center w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-code-xs text-code-xs text-primary uppercase tracking-widest">Protocol Stage // Active Settlement Interface</span>
+<span class="text-outline text-body-sm">•</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant tracking-wider">Docket Ref: CLM-1001-ALPHA</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Policyholder Lifecycle State Consoles</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mt-space-2xs">
+            Simultaneous validation deck illustrating pre-triage claim amendment ergonomics alongside statutory voluntary withdrawal safeguards.
+          </p>
+</div>
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<div class="px-space-sm py-space-2xs rounded-lg bg-surface-container-high flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span class="font-code-xs text-code-xs text-on-surface uppercase">Audit Chain Sealed</span>
+</div>
+<div class="px-space-sm py-space-2xs rounded-lg bg-surface-container-high flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">lock</span>
+<span class="font-code-xs text-code-xs text-secondary uppercase">256-Bit Immutable Log</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-xl items-start">
+<!-- PART A: AMEND CLAIM MODAL (760px class target / 7-column span) -->
+<div class="xl:col-span-7 flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-code-xs text-code-xs px-space-xs py-space-3xs rounded bg-surface-container-highest text-secondary uppercase tracking-widest font-semibold">09A</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant uppercase tracking-wider font-medium">Policyholder Modification Workflow</span>
+</div>
+<span class="font-code-xs text-code-xs text-outline">Target Dialog: 760px</span>
+</div>
+<div class="relative w-full max-w-[760px] mx-auto rounded-xl bg-surface-container-lowest/90 backdrop-blur-2xl shadow-2xl p-space-lg flex flex-col gap-space-lg">
+<div class="absolute -top-12 -left-12 w-48 h-48 bg-secondary/15 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-2.5 h-2.5 rounded-full bg-secondary shadow-[0_0_10px_rgba(76,215,246,0.8)]"></div>
+<span class="font-code-xs text-code-xs text-secondary uppercase font-semibold tracking-wide">Pre-Adjudication Workspace</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Amend Claim Details: CLM-1001</h2>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface p-space-2xs rounded-lg hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="inline-flex items-center gap-space-xs px-space-sm py-space-2xs rounded-full bg-secondary/10 text-secondary w-fit shadow-[0_0_14px_rgba(76,215,246,0.15)]">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-code-xs text-code-xs font-semibold uppercase tracking-wider">STATUS: SUBMITTED (Editable prior to Adjuster Triage)</span>
+</div>
+</div>
+<div class="rounded-lg bg-surface-container p-space-md flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[22px] mt-0.5">info</span>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">Pending Formal Adjuster Assignment</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-3xs">
+                  You may adjust estimated loss or upload additional repair invoices before Charlie Adjuster begins formal review. All modifications update the settlement docket SHA-256 state signature.
+                </p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center justify-between">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Estimated Claim Amount ($)</label>
+<span class="font-code-xs text-code-xs text-primary font-medium">Cap: $25,000.00 USD</span>
+</div>
+<div class="relative flex items-center">
+<span class="absolute left-space-md text-on-surface-variant font-code-sm text-code-sm">$</span>
+<input class="w-full h-11 bg-surface-container-high rounded-lg pl-7 pr-space-xl font-metric-display text-metric-display text-primary focus:outline-none focus:bg-surface-container-highest transition-all tracking-tight" type="text" value="2,500.00"/>
+<span class="absolute right-space-sm px-space-2xs py-space-3xs rounded bg-primary/10 text-primary font-code-xs text-code-xs uppercase tracking-wider font-semibold">USD</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-code-xs text-code-xs px-space-3xs">
+<span>Policy Deductible: $250.00</span>
+<span class="text-secondary font-medium">Auto-Recalculate Active</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center justify-between">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Incident Location</label>
+<span class="inline-flex items-center gap-space-3xs font-code-xs text-code-xs text-primary">
+<span class="material-symbols-outlined text-[14px]">my_location</span> GPS Verified
+                  </span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-space-sm text-secondary text-[20px]">location_on</span>
+<input class="w-full h-11 bg-surface-container-high rounded-lg pl-10 pr-space-md font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-highest transition-all" type="text" value="Station Road, Rajshahi"/>
+</div>
+<div class="text-on-surface-variant font-code-xs text-code-xs px-space-3xs">
+                  Coordinates: 24.3745° N, 88.6042° E • Geofence Match 99.8%
+                </div>
+</div>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center justify-between">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Damage Narrative &amp; Event Specifics</label>
+<span class="font-code-xs text-code-xs text-on-surface-variant">342 / 1000 chars</span>
+</div>
+<textarea class="w-full p-space-md rounded-lg bg-surface-container-high font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-highest transition-all resize-none leading-relaxed" rows="3">Rear-end collision at low speed while decelerating at traffic signal near Station Road overbridge. Front fender cracked, bumper displacement and headlight bracket fracture occurred. No mechanical fluid leakage.</textarea>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Attached Digital Evidence (2 Files)</span>
+<span class="font-code-xs text-code-xs text-secondary font-medium">Tamper-Evident SHA Hash Valid</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded bg-surface-container-highest overflow-hidden flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Close-up macro inspection photograph of cracked carbon-composite car bumper and misaligned headlight assembly in dark twilight with high-contrast reflection highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATKwn7xGJRLbxma7yOrZBnGySsCdlCFVgqP3GQb_HqK2Qk9kGCCQWS-PgXKfRZlJtK_K8xvawKmmPbDdIYU8dMjjsAaYrDU4yWa2OUMxi6DppNsXwDUR-YRhL7pEry_-Ee4rqujBSxM9_gxkqpJ22DOEGHFJ12DOqHm2_jIZk9pjaghxQcM4ri5KS5afJaW67svNRCOon8forLFZQjtbaDDlY8y3n3NeKac-zmDC1_LFVgUY9HmozXxQ"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-code-xs text-code-xs text-on-surface truncate font-semibold">bumper_collision_photo_01.jpg</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">2.4 MB • EXIF Validated</span>
+</div>
+</div>
+<div class="flex items-center gap-space-2xs flex-shrink-0">
+<button class="px-space-xs py-space-3xs rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-code-xs text-code-xs transition-colors" type="button">Replace</button>
+<button class="p-space-3xs rounded text-on-surface-variant hover:text-error transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded bg-surface-container-highest flex items-center justify-center flex-shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[24px]">description</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-code-xs text-code-xs text-on-surface truncate font-semibold">repair_estimate_v1.pdf</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">840 KB • OCR Parsed</span>
+</div>
+</div>
+<div class="flex items-center gap-space-2xs flex-shrink-0">
+<button class="px-space-xs py-space-3xs rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-code-xs text-code-xs transition-colors" type="button">Replace</button>
+<button class="p-space-3xs rounded text-on-surface-variant hover:text-error transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+<div class="group cursor-pointer rounded-lg bg-surface-container-low/60 hover:bg-surface-container-high/60 p-space-md flex flex-col items-center justify-center gap-space-2xs transition-all text-center">
+<div class="w-9 h-9 rounded-full bg-secondary/10 flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[20px]">cloud_upload</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface font-medium">
+                  + Upload Supplementary Receipts or Documents
+                </div>
+<span class="font-code-xs text-code-xs text-on-surface-variant">Drag &amp; drop files here • PDF, PNG, JPG accepted (Max 50MB per file)</span>
+</div>
+</div>
+<div class="pt-space-sm flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<button class="w-full sm:w-auto px-space-md py-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-body-sm text-body-sm" type="button">
+                Discard Changes
+              </button>
+<div class="w-full sm:w-auto flex flex-col sm:items-end gap-space-3xs">
+<button class="w-full sm:w-auto px-space-lg py-space-xs rounded-lg bg-secondary text-on-secondary-fixed font-headline-sm text-headline-sm font-semibold shadow-[0_0_18px_rgba(76,215,246,0.4)] hover:brightness-110 active:scale-95 transition-all flex items-center justify-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[20px]">check</span>
+                  Save &amp; Update Submission
+                </button>
+<span class="font-code-xs text-code-xs text-outline self-center sm:self-end">SHA-256 update logged upon commit</span>
+</div>
+</div>
+</div>
+</div>
+<!-- PART B: WITHDRAW CLAIM DIALOG (520px class target / 5-column span) -->
+<div class="xl:col-span-5 flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-code-xs text-code-xs px-space-xs py-space-3xs rounded bg-surface-container-highest text-error uppercase tracking-widest font-semibold">09B</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant uppercase tracking-wider font-medium">Irrevocable Voluntary Withdrawal Gateway</span>
+</div>
+<span class="font-code-xs text-code-xs text-outline">Target Dialog: 520px</span>
+</div>
+<div class="relative w-full max-w-[520px] mx-auto rounded-xl bg-surface-container-lowest/95 backdrop-blur-2xl shadow-2xl p-space-lg flex flex-col gap-space-md">
+<div class="absolute top-0 right-0 w-44 h-44 bg-error-container/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-error-container/30 flex items-center justify-center text-error shadow-[0_0_16px_rgba(255,180,171,0.25)]">
+<span class="material-symbols-outlined text-[28px]">warning</span>
+</div>
+<div class="flex flex-col">
+<span class="font-code-xs text-code-xs text-error uppercase font-bold tracking-wider">Statutory Notice</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant font-medium">Voluntary Docket Exit</span>
+</div>
+</div>
+<div class="px-space-xs py-space-3xs rounded bg-surface-container-high text-on-surface-variant font-code-xs text-code-xs">
+                NON-REVERSIBLE
+              </div>
+</div>
+<div class="flex flex-col gap-space-3xs">
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">Withdraw Claim #CLM-1001?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Policyholder: <span class="text-on-surface font-medium">Alice Johnson</span> • Policy: <span class="font-code-xs text-code-xs text-secondary font-medium">POL-AUTO-101</span> (Comprehensive Vehicle Protection)
+              </p>
+</div>
+<div class="rounded-lg bg-surface-container p-space-md flex flex-col gap-space-xs">
+<span class="font-label-caps text-label-caps text-error uppercase font-semibold">Immediate Effects of Withdrawal:</span>
+<ul class="flex flex-col gap-space-2xs text-on-surface font-body-sm text-body-sm">
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-error text-[16px] mt-0.5">cancel</span>
+<span>Claim status will transition permanently to <strong class="text-error font-semibold">WITHDRAWN</strong>.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-outline text-[16px] mt-0.5">remove_done</span>
+<span class="text-on-surface-variant">The file will be removed from active adjuster queues immediately.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[16px] mt-0.5">check_circle</span>
+<span>Your policy coverage limit (<strong class="text-primary font-semibold">$25,000.00</strong>) will remain 100% untouched and preserved.</span>
+</li>
+</ul>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase" for="withdrawal-reason">
+                Reason for Withdrawal <span class="text-error">*</span>
+</label>
+<div class="relative flex items-center">
+<select class="w-full h-11 bg-surface-container-high rounded-lg px-space-md font-body-md text-body-md text-on-surface appearance-none focus:outline-none focus:bg-surface-container-highest transition-all cursor-pointer" id="withdrawal-reason">
+<option selected="">Resolved directly with third party</option>
+<option>Filed by mistake</option>
+<option>Repair cost below deductible</option>
+<option>Settled via other insurance</option>
+<option>Other personal reason</option>
+</select>
+<span class="material-symbols-outlined absolute right-space-md text-on-surface-variant pointer-events-none text-[20px]">
+                  unfold_more
+                </span>
+</div>
+<span class="font-code-xs text-code-xs text-on-surface-variant">Mandatory actuarial reporting category</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-lowest flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-outline text-[18px]">verified_user</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant leading-relaxed">
+                By confirming, you certify that no coercive third-party settlement settlement clauses violate your state statutory insurer policy covenants.
+              </span>
+</div>
+<div class="pt-space-xs flex flex-col sm:flex-row items-center justify-end gap-space-sm">
+<button class="w-full sm:w-auto px-space-md py-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-body-sm text-body-sm" type="button">
+                Keep Claim Active
+              </button>
+<button class="w-full sm:w-auto px-space-md py-space-xs rounded-lg bg-error-container text-on-error-container font-headline-sm text-headline-sm font-semibold hover:brightness-110 active:scale-95 transition-all flex items-center justify-center gap-space-xs shadow-[0_0_16px_rgba(147,0,10,0.5)]" type="button">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+                Confirm Withdrawal
+              </button>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">policy</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Underwriting Clause #98-C</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">Reopenings permissible within 14 business days upon dispute proof</span>
+</div>
+</div>
+<a class="font-code-xs text-code-xs text-secondary hover:underline flex items-center gap-space-3xs" href="#">
+              Statutes <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+<div class="mt-space-sm p-space-md rounded-xl bg-surface-container-lowest flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant font-code-xs text-code-xs">
+<div class="flex items-center gap-space-md">
+<span class="flex items-center gap-space-2xs text-primary font-medium">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+            AegisClaims Core Engine v4.12.9
+          </span>
+<span>•</span>
+<span>Ledger Node: SYNCED (Lat 18ms)</span>
+<span>•</span>
+<span>Policy Underwriter: Sovereign Lloyds Alliance</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="px-space-xs py-space-3xs rounded bg-surface-container-high">ENCRYPTED AT REST: AES-256-GCM</span>
+<span class="px-space-xs py-space-3xs rounded bg-surface-container-high">FIPS-140-3 READY</span>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-lowest/90 py-space-lg"><div class="w-full px-grid-margin-desktop flex flex-col sm:flex-row items-center justify-between gap-space-md text-on-surface-variant font-code-xs text-code-xs"><div>© 2024 AegisClaims Solvency Systems • Enterprise Telemetry Engine v4.12.9</div><div class="flex items-center gap-space-lg"><span>TLS 1.3 SECURE DISBURSEMENT</span><span>STATUTORY AUDIT LOGGED</span></div></div></footer></body></html>

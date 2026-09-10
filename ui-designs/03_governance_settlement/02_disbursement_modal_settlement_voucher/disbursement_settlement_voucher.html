@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main > :first-child{margin-top:0 !important;}main > :last-child{margin-bottom:0 !important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "on-secondary-fixed": "#001f26",
+        "background": "#0f131b",
+        "surface-dim": "#0f131b",
+        "surface-bright": "#353941",
+        "outline-variant": "#3c4a42",
+        "surface-container-lowest": "#0a0e15",
+        "surface": "#0f131b",
+        "on-tertiary": "#003825",
+        "surface-container": "#1c2027",
+        "surface-container-highest": "#31353d",
+        "on-surface-variant": "#bbcabf",
+        "tertiary-fixed-dim": "#45dfa4",
+        "secondary-fixed": "#acedff",
+        "surface-tint": "#4edea3",
+        "on-secondary-fixed-variant": "#004e5c",
+        "on-primary-fixed-variant": "#005236",
+        "outline": "#86948a",
+        "on-tertiary-fixed-variant": "#005137",
+        "primary": "#4edea3",
+        "primary-fixed-dim": "#4edea3",
+        "on-secondary": "#003640",
+        "secondary-container": "#03b5d3",
+        "inverse-surface": "#dfe2ed",
+        "inverse-primary": "#006c49",
+        "on-primary-fixed": "#002113",
+        "on-primary-container": "#00422b",
+        "surface-container-low": "#181c23",
+        "on-surface": "#dfe2ed",
+        "inverse-on-surface": "#2d3038",
+        "tertiary-container": "#00b982",
+        "surface-variant": "#31353d",
+        "tertiary-fixed": "#68fcbf",
+        "secondary-fixed-dim": "#4cd7f6",
+        "on-error-container": "#ffdad6",
+        "primary-fixed": "#6ffbbe",
+        "surface-container-high": "#262a32",
+        "error-container": "#93000a",
+        "on-primary": "#003824",
+        "on-background": "#dfe2ed",
+        "primary-container": "#10b981",
+        "error": "#ffb4ab",
+        "on-secondary-container": "#00424e",
+        "on-error": "#690005",
+        "secondary": "#4cd7f6",
+        "on-tertiary-fixed": "#002114",
+        "on-tertiary-container": "#00422c",
+        "tertiary": "#45dfa4"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.125rem",
+        "lg": "0.25rem",
+        "xl": "0.5rem",
+        "full": "0.75rem"
+      },
+      "spacing": {
+        "space-xl": "2rem",
+        "space-xs": "0.5rem",
+        "space-2xl": "3rem",
+        "space-sm": "0.75rem",
+        "space-3xl": "4rem",
+        "space-lg": "1.5rem",
+        "space-2xs": "0.25rem",
+        "space-md": "1rem",
+        "grid-margin-mobile": "1rem",
+        "space-3xs": "0.125rem",
+        "grid-margin-desktop": "2rem",
+        "grid-gutter": "1.25rem"
+      },
+      "fontFamily": {
+        "body-md": [
+          "Inter"
+        ],
+        "headline-xl": [
+          "Plus Jakarta Sans"
+        ],
+        "display-lg": [
+          "Plus Jakarta Sans"
+        ],
+        "code-xs": [
+          "JetBrains Mono"
+        ],
+        "metric-display": [
+          "JetBrains Mono"
+        ],
+        "code-sm": [
+          "JetBrains Mono"
+        ],
+        "headline-sm": [
+          "Plus Jakarta Sans"
+        ],
+        "body-sm": [
+          "Inter"
+        ],
+        "display-lg-mobile": [
+          "Plus Jakarta Sans"
+        ],
+        "headline-lg": [
+          "Plus Jakarta Sans"
+        ],
+        "headline-md": [
+          "Plus Jakarta Sans"
+        ],
+        "headline-xl-mobile": [
+          "Plus Jakarta Sans"
+        ],
+        "label-caps": [
+          "Inter"
+        ],
+        "body-lg": [
+          "Inter"
+        ]
+      },
+      "fontSize": {
+        "body-md": [
+          "0.875rem",
+          {
+            "lineHeight": "1.375rem",
+            "letterSpacing": "0em",
+            "fontWeight": "400"
+          }
+        ],
+        "headline-xl": [
+          "2.25rem",
+          {
+            "lineHeight": "2.75rem",
+            "letterSpacing": "-0.025em",
+            "fontWeight": "600"
+          }
+        ],
+        "display-lg": [
+          "3rem",
+          {
+            "lineHeight": "3.5rem",
+            "letterSpacing": "-0.03em",
+            "fontWeight": "700"
+          }
+        ],
+        "code-xs": [
+          "0.6875rem",
+          {
+            "lineHeight": "1rem",
+            "letterSpacing": "0.02em",
+            "fontWeight": "500"
+          }
+        ],
+        "metric-display": [
+          "1.875rem",
+          {
+            "lineHeight": "2.25rem",
+            "letterSpacing": "-0.03em",
+            "fontWeight": "700"
+          }
+        ],
+        "code-sm": [
+          "0.8125rem",
+          {
+            "lineHeight": "1.25rem",
+            "letterSpacing": "-0.01em",
+            "fontWeight": "500"
+          }
+        ],
+        "headline-sm": [
+          "1.125rem",
+          {
+            "lineHeight": "1.5rem",
+            "letterSpacing": "-0.01em",
+            "fontWeight": "600"
+          }
+        ],
+        "body-sm": [
+          "0.75rem",
+          {
+            "lineHeight": "1.125rem",
+            "letterSpacing": "0.005em",
+            "fontWeight": "400"
+          }
+        ],
+        "display-lg-mobile": [
+          "2rem",
+          {
+            "lineHeight": "2.5rem",
+            "letterSpacing": "-0.02em",
+            "fontWeight": "700"
+          }
+        ],
+        "headline-lg": [
+          "1.75rem",
+          {
+            "lineHeight": "2.25rem",
+            "letterSpacing": "-0.02em",
+            "fontWeight": "600"
+          }
+        ],
+        "headline-md": [
+          "1.375rem",
+          {
+            "lineHeight": "1.75rem",
+            "letterSpacing": "-0.015em",
+            "fontWeight": "600"
+          }
+        ],
+        "headline-xl-mobile": [
+          "1.75rem",
+          {
+            "lineHeight": "2.25rem",
+            "letterSpacing": "-0.02em",
+            "fontWeight": "600"
+          }
+        ],
+        "label-caps": [
+          "0.6875rem",
+          {
+            "lineHeight": "0.875rem",
+            "letterSpacing": "0.06em",
+            "fontWeight": "600"
+          }
+        ],
+        "body-lg": [
+          "1rem",
+          {
+            "lineHeight": "1.5rem",
+            "letterSpacing": "-0.005em",
+            "fontWeight": "400"
+          }
+        ]
+      }
+    }
+  }
+}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-16 w-full px-grid-margin-desktop flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-xl"><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[20px]">verified_user</span></div><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase">Aegis<span class="text-primary">Claims</span></span></div><div class="hidden lg:flex items-center gap-space-2xs px-space-xs py-space-3xs rounded bg-surface-container-high"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-code-xs text-code-xs text-on-surface uppercase tracking-wider">Settlement Engine Active</span></div></div><nav class="hidden md:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-medium rounded"><a class="px-space-sm py-space-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="claim-details" href="#">Claim Overview</a><a aria-current="page" class="px-space-sm py-space-2xs transition-colors bg-primary-container text-on-primary-container font-medium rounded" data-path="amend-claim-modal" href="#">Amend Flow</a><a class="px-space-sm py-space-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="withdraw-claim-dialog" href="#">Withdrawal Flow</a><a class="px-space-sm py-space-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="audit-telemetry" href="#">Audit Telemetry</a></nav><div class="flex items-center gap-space-md"><div class="hidden sm:flex flex-col items-end"><span class="font-body-sm text-body-sm text-on-surface font-semibold">Alice Johnson</span><span class="font-code-xs text-code-xs text-on-surface-variant">Tier-3 Adjuster • ID #AJ-9412</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-background"><div class="flex flex-col w-full">
+<!-- Radial Ambient Lighting -->
+<div class="relative w-full overflow-hidden px-grid-margin-mobile lg:px-grid-margin-desktop py-space-xl">
+<div class="absolute -top-32 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-1/2 right-10 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-[100px] pointer-events-none -z-10"></div>
+<!-- Header Context / Breadcrumb Strip -->
+<div class="w-full mb-space-xl flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-code-xs text-code-xs tracking-wider uppercase">
+<span class="text-primary font-bold">PROTOCOL STAGE</span>
+<span>//</span>
+<span class="text-on-surface">TREASURY CLEARANCE DOCK</span>
+<span class="text-outline-variant">•</span>
+<span>Disbursal Authorization &amp; Proof-of-Reserve</span>
+<span class="text-outline-variant">•</span>
+<span class="text-secondary font-semibold">Docket Ref: CLM-1001-ALPHA</span>
+<span class="text-outline-variant">•</span>
+<span class="text-on-surface-variant font-code-xs">TXN-2026-98124</span>
+</div>
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-md">
+<div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">
+            Treasury Disbursement &amp; Settlement Voucher Engine
+          </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-3xs">
+            Executive dual-control multi-sig disbursement release alongside official cryptographic settlement certificate generation.
+          </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs">
+<div class="flex items-center gap-space-2xs px-space-sm py-space-2xs rounded-full bg-surface-container-high shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-code-xs text-code-xs text-primary font-semibold uppercase tracking-wider">RTGS Gateway Online</span>
+</div>
+<div class="flex items-center gap-space-2xs px-space-sm py-space-2xs rounded-full bg-surface-container-high shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]">lock_clock</span>
+<span class="font-code-xs text-code-xs text-on-surface uppercase tracking-wider">Multi-Sig: 2/2 Met</span>
+</div>
+<div class="flex items-center gap-space-2xs px-space-sm py-space-2xs rounded-full bg-surface-container-high shadow-sm">
+<span class="font-code-xs text-code-xs text-on-surface-variant">HEIGHT: #819,428</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Dual Panoramic Console Layout -->
+<div class="w-full grid grid-cols-1 xl:grid-cols-12 gap-space-xl items-start">
+<!-- PART 1: Disbursement Authorization Modal Console (approx 640px / 5 cols on 12-col) -->
+<div class="xl:col-span-5 w-full bg-surface-container-low rounded-xl shadow-xl p-space-lg flex flex-col gap-space-md relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none"></div>
+<!-- 1. Modal Header -->
+<div class="flex items-start justify-between gap-space-sm pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[22px]">account_balance</span>
+</div>
+<div>
+<div class="flex items-center gap-space-2xs mb-space-3xs">
+<span class="px-space-xs py-space-3xs rounded-full bg-surface-container text-primary font-code-xs text-code-xs tracking-wider font-semibold">
+                  STAGE 04: TREASURY ESCROW CLEARANCE
+                </span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">
+                Authorize Disbursement
+              </h2>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" title="Dismiss console">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- 2. Payee Verification Card -->
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Validated Recipient</span>
+<span class="flex items-center gap-space-3xs font-code-xs text-code-xs text-primary font-medium">
+<span class="material-symbols-outlined text-[14px]">verified</span> Identity Attested
+            </span>
+</div>
+<div class="flex items-center justify-between">
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold">Alice Johnson</div>
+<div class="font-code-xs text-code-xs text-on-surface-variant">ID: USR-001 • Claim Ref: CLM-1001</div>
+</div>
+<div class="text-right">
+<div class="font-body-sm text-body-sm text-on-surface font-medium">City Bank Bangladesh</div>
+<div class="font-code-xs text-code-xs text-on-surface-variant">ACC: •••• 4829 • ROUTING: 09284192</div>
+</div>
+</div>
+<!-- Method Selector Dropdown Mock -->
+<div class="relative mt-space-2xs">
+<label class="block font-label-caps text-label-caps text-on-surface-variant uppercase mb-space-3xs">Disbursement Rail</label>
+<div class="w-full bg-surface-container-highest px-space-md py-space-xs rounded-lg flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">bolt</span>
+<span class="font-body-md text-body-md text-on-surface">Direct Deposit (Instant RTGS Settlement)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-space-3xs rounded-full bg-surface-container-low text-primary font-code-xs text-code-xs uppercase font-semibold">Instant Zero-Lag</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 3. Settlement Math Card -->
+<div class="p-space-md rounded-lg bg-surface-container-high flex flex-col gap-space-xs">
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Assessed Gross Claim Loss</span>
+<span class="font-code-sm text-code-sm text-on-surface">$2,500.00 USD</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Contractual Policy Deductible</span>
+<span class="font-code-sm text-code-sm text-error">-$500.00 USD</span>
+</div>
+<div class="h-px w-full bg-surface-container-highest my-space-2xs"></div>
+<div class="flex items-baseline justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase block">Net Treasury Release</span>
+<span class="font-code-xs text-code-xs text-secondary font-medium flex items-center gap-space-3xs mt-space-3xs">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> $0.00 Fee • Sovereign Escrow Absorbed
+              </span>
+</div>
+<div class="text-right">
+<span class="font-metric-display text-metric-display text-primary tracking-tight font-bold drop-shadow-[0_0_12px_rgba(78,222,163,0.35)]">
+                $2,000.00
+              </span>
+<span class="font-code-xs text-code-xs text-on-surface-variant block uppercase">USD • Net Cleared</span>
+</div>
+</div>
+</div>
+<!-- 4. Security & Sign-Off Section -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">
+              Executive Dual-Key Security PIN
+            </span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">KEYPAD SECURE: AES-256</span>
+</div>
+<!-- 6-digit Admin Security PIN inputs -->
+<div class="grid grid-cols-6 gap-space-xs">
+<input class="w-full h-12 text-center bg-surface-container-highest rounded-lg font-metric-display text-metric-display text-primary outline-none focus:bg-surface-container" maxlength="1" readonly="" type="password" value="7"/>
+<input class="w-full h-12 text-center bg-surface-container-highest rounded-lg font-metric-display text-metric-display text-primary outline-none focus:bg-surface-container" maxlength="1" readonly="" type="password" value="4"/>
+<input class="w-full h-12 text-center bg-surface-container-highest rounded-lg font-metric-display text-metric-display text-primary outline-none focus:bg-surface-container" maxlength="1" readonly="" type="password" value="9"/>
+<input class="w-full h-12 text-center bg-surface-container-highest rounded-lg font-metric-display text-metric-display text-primary outline-none focus:bg-surface-container" maxlength="1" readonly="" type="password" value="2"/>
+<input class="w-full h-12 text-center bg-surface-container-highest rounded-lg font-metric-display text-metric-display text-primary outline-none focus:bg-surface-container" maxlength="1" readonly="" type="password" value="8"/>
+<input class="w-full h-12 text-center bg-surface-container-highest rounded-lg font-metric-display text-metric-display text-primary outline-none focus:bg-surface-container" maxlength="1" readonly="" type="password" value="1"/>
+</div>
+<div class="flex items-center gap-space-xs p-space-xs bg-surface-container rounded-lg">
+<span class="material-symbols-outlined text-primary text-[18px]">verified_user</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">
+              Hardware Security Module (HSM) Attested • FIPS-140-3 Level 4 Compliant
+            </span>
+</div>
+</div>
+<!-- 5. Action Footer -->
+<div class="flex items-center justify-between gap-space-md pt-space-xs">
+<button class="px-space-md py-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm transition-colors flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[16px]">pause_circle</span>
+<span>Hold for Audit</span>
+</button>
+<button class="flex-1 px-space-lg py-space-sm rounded-lg bg-primary hover:bg-primary-container text-on-primary font-headline-sm text-headline-sm font-semibold flex items-center justify-center gap-space-xs shadow-[0_0_16px_rgba(78,222,163,0.3)] transition-all transform active:scale-[0.99]" id="disburse-btn">
+<span class="material-symbols-outlined text-[20px]">lock_open</span>
+<span>Authorize &amp; Disburse Payout →</span>
+</button>
+</div>
+</div>
+<!-- PART 2: Official Generated Settlement Voucher Card (approx 720px - 800px / 7 cols) -->
+<div class="xl:col-span-7 w-full bg-surface-container-low rounded-xl shadow-xl p-space-xl flex flex-col gap-space-lg relative overflow-hidden">
+<!-- Document Toolbar -->
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container-highest">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="font-code-xs text-code-xs text-on-surface font-semibold uppercase tracking-wider">
+              OFFICIAL CERTIFICATE • IMMUTABLE RECORD
+            </span>
+</div>
+<div class="flex items-center gap-space-2xs">
+<button class="px-space-sm py-space-2xs rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-code-xs text-code-xs flex items-center gap-space-3xs transition-colors" onclick="window.print()">
+<span class="material-symbols-outlined text-[15px]">picture_as_pdf</span>
+<span>Download PDF</span>
+</button>
+<button class="px-space-sm py-space-2xs rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-code-xs text-code-xs flex items-center gap-space-3xs transition-colors" onclick="window.print()">
+<span class="material-symbols-outlined text-[15px]">print</span>
+<span>Print Official</span>
+</button>
+<button class="px-space-sm py-space-2xs rounded-lg bg-surface-container hover:bg-surface-container-high text-secondary font-code-xs text-code-xs flex items-center gap-space-3xs transition-colors">
+<span class="material-symbols-outlined text-[15px]">open_in_new</span>
+<span>Verify DAG</span>
+</button>
+</div>
+</div>
+<!-- Certificate Surface Canvas -->
+<div class="relative bg-surface-container-lowest rounded-lg p-space-xl flex flex-col gap-space-lg shadow-inner overflow-hidden">
+<!-- Subtle Guilloche Background Decoration Vector -->
+<svg class="absolute inset-0 w-full h-full opacity-5 pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="guilloche-pat" patternunits="userSpaceOnUse" width="40">
+<path d="M 0 20 Q 10 0 20 20 T 40 20" fill="none" stroke="currentColor" stroke-width="0.7"></path>
+<circle cx="20" cy="20" fill="none" r="15" stroke="currentColor" stroke-width="0.5"></circle>
+</pattern>
+</defs>
+<rect fill="url(#guilloche-pat)" height="100%" width="100%"></rect>
+</svg>
+<!-- 1. Top Certificate Header & Crest -->
+<div class="relative flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md pb-space-md border-b border-surface-container-high">
+<div class="flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 via-surface-container-high to-secondary/20 flex items-center justify-center text-primary shadow-md">
+<span class="material-symbols-outlined text-[32px]">shield_with_house</span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-secondary tracking-widest uppercase block font-semibold">
+                  Aegis Insurance Corporation • RUET Sessional Syndicate
+                </span>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase tracking-tight mt-space-3xs">
+                  Official Settlement Voucher &amp; Receipt
+                </h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">
+                  Statutory Certificate of Complete Indemnification &amp; Final Loss Satisfaction
+                </span>
+</div>
+</div>
+<!-- Golden/Emerald Syndicate Seal Pill -->
+<div class="px-space-md py-space-xs rounded-lg bg-surface-container-high text-right flex flex-col items-end">
+<span class="font-code-xs text-code-xs text-primary font-bold tracking-widest uppercase flex items-center gap-space-3xs">
+<span class="material-symbols-outlined text-[14px]">military_tech</span> SOLVENCY SECURED
+              </span>
+<span class="font-code-xs text-code-xs text-on-surface-variant mt-space-3xs">
+                RUET Node-04 • ESCROW-BD-01
+              </span>
+</div>
+</div>
+<!-- Metadata Ribbon -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-xs font-code-xs text-code-xs text-on-surface-variant bg-surface-container px-space-md py-space-2xs rounded">
+<div><span class="text-outline">ISSUED:</span> Sept 10, 2026 • 11:24:00 UTC</div>
+<div><span class="text-outline">AUTHORITY:</span> RUET Solvency Node 04</div>
+<div class="sm:text-right"><span class="text-outline">VAULT:</span> DHAKA-MAIN-TREASURY</div>
+</div>
+<!-- 2. Ledger Data Grid (3x2 format) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="p-space-sm rounded bg-surface-container flex flex-col gap-space-3xs">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Voucher Identifier</span>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold">SETTLE-2026-901</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">Status: Final • Irreversible</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container flex flex-col gap-space-3xs">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Claim Reference</span>
+<div class="flex items-center gap-space-2xs">
+<span class="px-space-xs py-space-3xs rounded bg-surface-container-highest text-secondary font-code-xs text-code-xs font-bold">CLM-1001</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">Alpha Docket</span>
+</div>
+<span class="font-code-xs text-code-xs text-on-surface-variant">Adjudicated Loss Satisfied</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container flex flex-col gap-space-3xs">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Transaction Hash</span>
+<div class="flex items-center justify-between">
+<span class="font-code-xs text-code-xs text-primary font-medium" id="txn-hash">TXN-2026-98124</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors" onclick="navigator.clipboard.writeText('TXN-2026-98124'); alert('Transaction Ref Copied: TXN-2026-98124');" title="Copy Transaction Reference">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+<span class="font-code-xs text-code-xs text-on-surface-variant">Settled via Direct RTGS</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container flex flex-col gap-space-3xs">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Policy In Scope</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">PN-2026-9812</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">2023 Honda Civic AWD • Comprehensive</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container flex flex-col gap-space-3xs">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Beneficiary</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Alice Johnson</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">NID: ••••••••8491</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container flex flex-col gap-space-3xs">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Amount Disbursed</span>
+<span class="font-metric-display text-metric-display text-primary font-bold">$2,000.00 <span class="text-sm font-normal text-on-surface-variant">USD</span></span>
+<span class="font-code-xs text-code-xs text-primary uppercase font-semibold">Paid in Full • Irrevocable</span>
+</div>
+</div>
+<!-- 3. Cryptographic Proof & Signatory Block -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md pt-space-md border-t border-surface-container-high">
+<!-- Left Cryptographic Merkle Stamp (7 cols) -->
+<div class="lg:col-span-7 bg-surface-container p-space-md rounded flex items-start gap-space-md">
+<!-- QR Code Cryptographic Glyph Mock -->
+<div class="w-20 h-20 bg-surface-container-highest rounded p-1 flex flex-col justify-between shrink-0">
+<div class="grid grid-cols-3 gap-0.5 w-full h-full">
+<div class="bg-primary rounded-[1px]"></div>
+<div class="bg-primary/40 rounded-[1px]"></div>
+<div class="bg-primary rounded-[1px]"></div>
+<div class="bg-primary/20 rounded-[1px]"></div>
+<div class="bg-secondary rounded-[1px]"></div>
+<div class="bg-primary/50 rounded-[1px]"></div>
+<div class="bg-primary rounded-[1px]"></div>
+<div class="bg-primary/30 rounded-[1px]"></div>
+<div class="bg-primary rounded-[1px]"></div>
+</div>
+</div>
+<div class="flex flex-col gap-space-3xs overflow-hidden">
+<span class="font-label-caps text-label-caps text-on-surface uppercase font-semibold flex items-center gap-space-3xs">
+<span class="material-symbols-outlined text-secondary text-[14px]">token</span>
+                  Merkle Block Cryptographic Proof
+                </span>
+<span class="font-code-xs text-code-xs text-on-surface-variant truncate">
+                  Block Root: <span class="text-on-surface">0x94b2a819c4d9e07f...8f1a</span>
+</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">
+                  Timestamp: <span class="text-on-surface">2026-09-10T11:24:00.412Z</span>
+</span>
+<span class="font-code-xs text-code-xs text-primary font-medium flex items-center gap-space-3xs">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  State: IMMUTABLE_SETTLED (Verified DAG)
+                </span>
+</div>
+</div>
+<!-- Right Official Signatory (5 cols) -->
+<div class="lg:col-span-5 bg-surface-container p-space-md rounded flex flex-col justify-between">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Authorized Signatory</span>
+<!-- Digital signature cursive display -->
+<div class="py-space-xs font-serif italic text-primary text-xl tracking-wide select-none">
+                  Dana Admin
+                </div>
+</div>
+<div class="border-t border-surface-container-highest pt-space-2xs">
+<div class="font-body-sm text-body-sm text-on-surface font-semibold">Dana Admin</div>
+<div class="font-code-xs text-code-xs text-on-surface-variant">CFO • Statutory Governance</div>
+<div class="font-code-xs text-code-xs text-secondary mt-space-3xs">FPR: 8A29-DE41-77BC-0104</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Compliance Strip -->
+<div class="w-full mt-space-xl pt-space-md border-t border-surface-container-high flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-code-xs text-code-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[15px]">security</span>
+<span>RUET Enterprise Insurance Lifecycle Architecture • ISO/IEC 27001 &amp; SOC-2 Type II Cryptographic Enclave</span>
+</div>
+<div>
+        © 2026 AegisClaims Systems Inc. • All Rights Reserved.
+      </div>
+</div>
+</div>
+</div>
+<script>
+  document.getElementById('disburse-btn')?.addEventListener('click', () => {
+    const btn = document.getElementById('disburse-btn');
+    btn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">sync</span><span>Broadcasting to RTGS Rail...</span>';
+    btn.classList.remove('bg-primary');
+    btn.classList.add('bg-secondary', 'text-on-secondary');
+    
+    setTimeout(() => {
+      btn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check_circle</span><span>Disbursement Finalized &amp; Logged</span>';
+      btn.classList.remove('bg-secondary', 'text-on-secondary');
+      btn.classList.add('bg-primary-container', 'text-on-primary-container');
+    }, 1200);
+  });
+</script></main><footer class="w-full bg-surface-container-lowest/90 py-space-lg"><div class="w-full px-grid-margin-desktop flex flex-col sm:flex-row items-center justify-between gap-space-md text-on-surface-variant font-code-xs text-code-xs"><div>© 2024 AegisClaims Solvency Systems • Enterprise Telemetry Engine v4.12.9</div><div class="flex items-center gap-space-lg"><span>TLS 1.3 SECURE DISBURSEMENT</span><span>STATUTORY AUDIT LOGGED</span></div></div></footer></body></html>

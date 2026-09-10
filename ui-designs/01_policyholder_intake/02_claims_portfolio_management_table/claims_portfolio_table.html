@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-primary":"#003824","surface":"#0f131b","error-container":"#93000a","surface-dim":"#0f131b","tertiary":"#45dfa4","primary-fixed":"#6ffbbe","on-secondary-fixed-variant":"#004e5c","on-primary-container":"#00422b","on-secondary":"#003640","background":"#0f131b","on-error-container":"#ffdad6","on-tertiary-container":"#00422c","outline-variant":"#3c4a42","error":"#ffb4ab","surface-container-lowest":"#0a0e15","inverse-primary":"#006c49","on-tertiary-fixed-variant":"#005137","tertiary-container":"#00b982","tertiary-fixed":"#68fcbf","on-primary-fixed-variant":"#005236","primary":"#4edea3","inverse-surface":"#dfe2ed","on-surface":"#dfe2ed","secondary":"#4cd7f6","surface-container-high":"#262a32","on-background":"#dfe2ed","primary-fixed-dim":"#4edea3","on-error":"#690005","on-tertiary-fixed":"#002114","secondary-fixed":"#acedff","surface-variant":"#31353d","secondary-container":"#03b5d3","surface-container":"#1c2027","surface-tint":"#4edea3","inverse-on-surface":"#2d3038","surface-container-highest":"#31353d","tertiary-fixed-dim":"#45dfa4","secondary-fixed-dim":"#4cd7f6","surface-bright":"#353941","on-secondary-fixed":"#001f26","outline":"#86948a","on-surface-variant":"#bbcabf","on-primary-fixed":"#002113","on-tertiary":"#003825","on-secondary-container":"#00424e","surface-container-low":"#181c23","primary-container":"#10b981"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-xl":"2rem","grid-margin-mobile":"1rem","space-3xs":"0.125rem","space-3xl":"4rem","space-md":"1rem","grid-gutter":"1.25rem","space-lg":"1.5rem","space-xs":"0.5rem","grid-margin-desktop":"2rem","space-sm":"0.75rem","space-2xs":"0.25rem","space-2xl":"3rem"},fontFamily:{"display-lg":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"code-sm":["JetBrains Mono"],"headline-xl":["Plus Jakarta Sans"],"metric-display":["JetBrains Mono"],"code-xs":["JetBrains Mono"],"body-sm":["Inter"],"body-md":["Inter"],"display-lg-mobile":["Plus Jakarta Sans"],"body-lg":["Inter"],"headline-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"label-caps":["Inter"]},fontSize:{"display-lg":["3rem",{lineHeight:"3.5rem",letterSpacing:"-0.03em",fontWeight:"700"}],"headline-xl-mobile":["1.75rem",{lineHeight:"2.25rem",letterSpacing:"-0.02em",fontWeight:"600"}],"headline-lg":["1.75rem",{lineHeight:"2.25rem",letterSpacing:"-0.02em",fontWeight:"600"}],"code-sm":["0.8125rem",{lineHeight:"1.25rem",letterSpacing:"-0.01em",fontWeight:"500"}],"headline-xl":["2.25rem",{lineHeight:"2.75rem",letterSpacing:"-0.025em",fontWeight:"600"}],"metric-display":["1.875rem",{lineHeight:"2.25rem",letterSpacing:"-0.03em",fontWeight:"700"}],"code-xs":["0.6875rem",{lineHeight:"1rem",letterSpacing:"0.02em",fontWeight:"500"}],"body-sm":["0.75rem",{lineHeight:"1.125rem",letterSpacing:"0.005em",fontWeight:"400"}],"body-md":["0.875rem",{lineHeight:"1.375rem",letterSpacing:"0em",fontWeight:"400"}],"display-lg-mobile":["2rem",{lineHeight:"2.5rem",letterSpacing:"-0.02em",fontWeight:"700"}],"body-lg":["1rem",{lineHeight:"1.5rem",letterSpacing:"-0.005em",fontWeight:"400"}],"headline-md":["1.375rem",{lineHeight:"1.75rem",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-sm":["1.125rem",{lineHeight:"1.5rem",letterSpacing:"-0.01em",fontWeight:"600"}],"label-caps":["0.6875rem",{lineHeight:"0.875rem",letterSpacing:"0.06em",fontWeight:"600"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col border-r border-outline-variant/20"><div class="h-20 px-space-md flex items-center gap-space-xs border-b border-outline-variant/20"><div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center border border-primary/40 shadow-[0_0_12px_rgba(16,185,129,0.25)]"><span class="material-symbols-outlined text-primary text-[20px]">shield_with_heart</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">AegisClaims</span><span class="font-code-xs text-code-xs text-primary font-semibold uppercase">RUET Suite</span></div></div><div class="p-space-md"><div class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider mb-space-xs">Operations Deck</div><nav class="flex flex-col gap-space-3xs" data-active-classes="bg-surface-container-highest text-primary border-l-2 border-primary"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="examiner-claims-desk" href="#"><span class="material-symbols-outlined text-[18px]">inbox</span>Claim Adjudication</a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="policyholder-portal" href="#"><span class="material-symbols-outlined text-[18px]">assignment_ind</span>Policy Intake</a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg font-body-md transition-all bg-surface-container-highest text-primary border-l-2 border-primary" data-path="executive-treasury-surveillance" href="#"><span class="material-symbols-outlined text-[18px]">account_balance</span>Treasury &amp; Reserves</a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="fraud-vector-analysis" href="#"><span class="material-symbols-outlined text-[18px]">radar</span>Fraud Vectors</a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="audit-ledger" href="#"><span class="material-symbols-outlined text-[18px]">verified</span>Waterfall Audit Log</a></nav></div><div class="mt-auto p-space-md border-t border-outline-variant/20 bg-surface-container-low/40"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-code-xs text-code-xs text-primary font-medium">Solvency Node Online</span></div><span class="font-code-xs text-code-xs text-on-surface-variant block mt-space-3xs">Latency: 14ms • Block #819,421</span></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-20 bg-surface-container-lowest/85 backdrop-blur-md border-b border-primary/20 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.5)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-xs px-space-sm py-space-2xs rounded-full bg-surface-container-low border border-primary/20"><span class="w-2 h-2 rounded-full bg-primary animate-pulse shadow-[0_0_8px_rgba(78,222,163,0.8)]"></span><span class="font-code-xs text-code-xs text-primary tracking-wide">System Live - Waterfall Audit Compliant</span></div><div class="relative"><span class="material-symbols-outlined absolute left-space-sm top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span><input class="w-60 lg:w-72 pl-9 pr-space-sm py-space-2xs rounded-md bg-surface-container text-on-surface placeholder-on-surface-variant font-code-sm text-code-sm border border-outline-variant/40 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Search claim, hash, policy..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="flex items-center p-space-2xs rounded-lg bg-surface-container-low border border-outline-variant/30 gap-space-2xs"><span class="px-space-xs py-space-2xs rounded-md font-label-caps text-label-caps text-on-surface-variant uppercase">Persona:</span><a class="px-space-xs py-space-2xs rounded font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="policyholder-portal" href="#">Policyholder</a><a class="px-space-xs py-space-2xs rounded font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="examiner-claims-desk" href="#">Examiner</a><a class="px-space-xs py-space-2xs rounded font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="executive-treasury-surveillance" href="#">Executive</a></div><button class="relative p-space-xs rounded-md bg-surface-container-low border border-outline-variant/30 text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></button><div class="flex items-center pl-space-2xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-20 bg-background min-h-screen"><div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(16,185,129,0.08),transparent_65%)] pointer-events-none"></div><div class="relative z-10 w-full px-grid-margin-desktop"><div class="flex flex-col w-full pb-space-3xl space-y-space-lg text-on-surface">
+<!-- Breadcrumb & Context Deck -->
+<section class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md pt-space-xs">
+<div class="space-y-space-2xs">
+<div class="flex flex-wrap items-center gap-space-xs font-code-xs text-code-xs text-on-surface-variant">
+<span class="text-primary font-semibold tracking-wider">VAULT NODE ID: SEC-ALICE-8942-X</span>
+<span class="text-outline-variant">•</span>
+<span class="tracking-wide">CLAIMS PORTFOLIO REPOSITORY</span>
+<span class="text-outline-variant">•</span>
+<span class="px-space-2xs py-space-3xs rounded bg-surface-container-high text-secondary font-medium tracking-wide">PERSONA: ALICE JOHNSON (POLICYHOLDER)</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Claims History &amp; Portfolio Management</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">Comprehensive cryptographic lifecycle tracking, historical voucher settlements, and active adjudication pipelines.</p>
+</div>
+<div class="flex items-center gap-space-sm self-start lg:self-end">
+<div class="flex items-center gap-space-xs px-space-sm py-space-2xs rounded-full bg-surface-container-low shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-code-xs text-code-xs text-primary font-medium tracking-wide">ALL LEDGERS SYNCED • AUDIT PASS</span>
+</div>
+<div class="px-space-sm py-space-2xs rounded-full bg-surface-container-high text-on-surface font-code-xs text-code-xs font-semibold tracking-wider">
+        4 CLAIMS INDEXED
+      </div>
+</div>
+</section>
+<!-- Top Metric Bar (4 Glowing Glass Cards) -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 1: Active In Review -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low/70 backdrop-blur-md p-space-md shadow-md hover:bg-surface-container/80 transition-all duration-200 group">
+<div class="absolute -right-8 -top-8 w-24 h-24 rounded-full bg-secondary/10 blur-xl pointer-events-none group-hover:bg-secondary/20 transition-all duration-300"></div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">ACTIVE IN REVIEW</span>
+<span class="flex h-2 w-2 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+</div>
+<div class="font-metric-display text-metric-display text-on-surface font-bold tracking-tight">1 Claim</div>
+<div class="flex items-center gap-space-2xs mt-space-2xs">
+<span class="font-code-xs text-code-xs text-secondary font-medium">CLM-1001</span>
+<span class="text-outline-variant font-code-xs text-code-xs">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Stage 2 Adjudication</span>
+</div>
+</div>
+<!-- Card 2: Settled Lifetime Payouts -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low/70 backdrop-blur-md p-space-md shadow-md hover:bg-surface-container/80 transition-all duration-200 group">
+<div class="absolute -right-8 -top-8 w-24 h-24 rounded-full bg-primary/10 blur-xl pointer-events-none group-hover:bg-primary/20 transition-all duration-300"></div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">SETTLED LIFETIME PAYOUTS</span>
+<span class="material-symbols-outlined text-primary text-[18px]">verified_user</span>
+</div>
+<div class="font-metric-display text-metric-display text-primary font-bold tracking-tight">$6,200.00</div>
+<div class="flex items-center gap-space-2xs mt-space-2xs">
+<span class="font-code-xs text-code-xs text-primary-fixed font-semibold">2 Disbursed Vouchers</span>
+<span class="text-outline-variant font-code-xs text-code-xs">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">100% RTGS</span>
+</div>
+</div>
+<!-- Card 3: Total Claims Submitted -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low/70 backdrop-blur-md p-space-md shadow-md hover:bg-surface-container/80 transition-all duration-200 group">
+<div class="absolute -right-8 -top-8 w-24 h-24 rounded-full bg-surface-bright/20 blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">TOTAL CLAIMS SUBMITTED</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">folder_special</span>
+</div>
+<div class="font-metric-display text-metric-display text-on-surface font-bold tracking-tight">4</div>
+<div class="flex items-center gap-space-2xs mt-space-2xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Across Auto, Health &amp; Home</span>
+</div>
+</div>
+<!-- Card 4: Average Turnaround -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low/70 backdrop-blur-md p-space-md shadow-md hover:bg-surface-container/80 transition-all duration-200 group">
+<div class="absolute -right-8 -top-8 w-24 h-24 rounded-full bg-secondary-container/15 blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">AVERAGE TURNAROUND</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">speed</span>
+</div>
+<div class="font-metric-display text-metric-display text-on-surface font-bold tracking-tight">1.2 Days</div>
+<div class="flex items-center gap-space-2xs mt-space-2xs">
+<span class="font-code-xs text-code-xs text-secondary font-medium">SLA Benchmark: &lt; 24.0 hrs</span>
+</div>
+</div>
+</section>
+<!-- Filter & Operational Action Strip -->
+<section class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md bg-surface-container-lowest/80 p-space-xs rounded-xl backdrop-blur-md">
+<!-- Segmented Filter Pills -->
+<div class="flex items-center p-space-3xs rounded-lg bg-surface-container-low overflow-x-auto">
+<button class="px-space-sm py-space-xs rounded-md font-body-sm text-body-sm font-medium bg-surface-container-high text-primary shadow-sm whitespace-nowrap transition-all" type="button">
+        All Claims (4)
+      </button>
+<button class="px-space-sm py-space-xs rounded-md font-body-sm text-body-sm font-medium text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all whitespace-nowrap" type="button">
+        Active in Review (1)
+      </button>
+<button class="px-space-sm py-space-xs rounded-md font-body-sm text-body-sm font-medium text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all whitespace-nowrap" type="button">
+        Settled (2)
+      </button>
+<button class="px-space-sm py-space-xs rounded-md font-body-sm text-body-sm font-medium text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all whitespace-nowrap" type="button">
+        Withdrawn (1)
+      </button>
+</div>
+<!-- Center Search Bar with Shortcut -->
+<div class="relative flex-1 max-w-xl">
+<span class="material-symbols-outlined absolute left-space-sm top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">manage_search</span>
+<input class="w-full pl-9 pr-14 py-space-xs rounded-lg bg-surface-container-low text-on-surface placeholder-on-surface-variant font-code-sm text-code-sm focus:outline-none focus:bg-surface-container transition-all" placeholder="Filter claims by Claim ID, policy, or date..." type="text"/>
+<span class="absolute right-space-sm top-1/2 -translate-y-1/2 px-space-2xs py-space-3xs rounded bg-surface-container-high text-on-surface-variant font-code-xs text-code-xs">⌘K</span>
+</div>
+<!-- Right Primary CTA -->
+<button class="flex items-center justify-center gap-space-xs px-space-md py-space-xs rounded-lg bg-primary text-on-primary font-body-md text-body-md font-semibold hover:bg-primary-fixed transition-all shadow-md" type="button">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>File New Claim (Instant FNOL)</span>
+</button>
+</section>
+<!-- High-Density Claims Matrix -->
+<div class="overflow-hidden rounded-xl bg-surface-container-low/75 backdrop-blur-xl shadow-xl">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<!-- Table Header -->
+<thead>
+<tr class="bg-surface-container-lowest/90 text-on-surface-variant font-label-caps text-label-caps uppercase tracking-wider">
+<th class="py-space-sm px-space-md font-semibold">CLAIM REF</th>
+<th class="py-space-sm px-space-md font-semibold">POLICY TYPE &amp; COVERAGE</th>
+<th class="py-space-sm px-space-md font-semibold">INCIDENT DATE &amp; GEOFENCE</th>
+<th class="py-space-sm px-space-md font-semibold text-right">CLAIMED LOSS</th>
+<th class="py-space-sm px-space-md font-semibold">CURRENT STAGE / STATUS</th>
+<th class="py-space-sm px-space-md font-semibold">ASSIGNED EXAMINER</th>
+<th class="py-space-sm px-space-md font-semibold text-right">ACTIONS</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-body-md">
+<!-- ROW 1: Active Highlighted Row (CLM-1001) -->
+<tr class="bg-surface-container/60 hover:bg-surface-container transition-colors duration-150 relative">
+<td class="py-space-md px-space-md align-middle">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-6 rounded-full bg-secondary"></span>
+<span class="px-space-xs py-space-3xs rounded-md bg-secondary/15 text-secondary font-code-sm text-code-sm font-semibold tracking-wide">
+                  #CLM-1001
+                </span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">directions_car</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-2xs">
+<span class="font-code-xs text-code-xs text-on-surface font-semibold">POL-AUTO-101</span>
+<span class="text-outline-variant font-code-xs text-code-xs">•</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate">Comprehensive Vehicle Protection</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">2023 Honda Civic AWD • VIN #...9124</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface">Sept 01, 2026</span>
+<div class="flex items-center gap-space-2xs mt-space-3xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Station Road, Rajshahi</span>
+<span class="inline-flex items-center gap-space-3xs px-space-2xs py-space-3xs rounded bg-surface-container-high text-primary font-code-xs text-code-xs font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    GPS VERIFIED
+                  </span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md align-middle text-right">
+<span class="font-metric-display text-metric-display text-on-surface font-semibold">$2,500.00</span>
+<span class="block font-code-xs text-code-xs text-on-surface-variant">USD Equivalent</span>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<div class="inline-flex flex-col gap-space-3xs">
+<span class="inline-flex items-center gap-space-xs px-space-xs py-space-2xs rounded-full bg-secondary/15 text-secondary font-code-xs text-code-xs font-semibold uppercase tracking-wider shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                  UNDER REVIEW (STAGE 2)
+                </span>
+<span class="font-code-xs text-code-xs text-on-surface-variant pl-space-xs">Estimated SLA: 8h remaining</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded-full bg-surface-container-highest text-primary font-code-xs text-code-xs font-semibold flex items-center justify-center">
+                  CA
+                </div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Charlie Adjuster</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">USR-003 Tier-3</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md align-middle text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<a class="inline-flex items-center gap-space-3xs px-space-sm py-space-xs rounded-md bg-secondary text-on-secondary font-body-sm text-body-sm font-semibold hover:bg-secondary-fixed transition-all shadow-sm" href="#">
+<span>Track Live</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+<button class="inline-flex items-center gap-space-3xs px-space-xs py-space-xs rounded-md bg-surface-container-high text-error hover:bg-error-container hover:text-on-error-container transition-all" title="Withdraw Claim" type="button">
+<span class="material-symbols-outlined text-[16px]">cancel</span>
+<span class="font-body-sm text-body-sm">Withdraw</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 2: Settled Row (CLM-0892) -->
+<tr class="bg-surface-container-lowest/30 hover:bg-surface-container-low transition-colors duration-150">
+<td class="py-space-md px-space-md align-middle">
+<span class="font-code-sm text-code-sm text-on-surface font-medium pl-space-xs">
+                #CLM-0892
+              </span>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">health_and_safety</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-2xs">
+<span class="font-code-xs text-code-xs text-on-surface font-semibold">POL-HLT-304</span>
+<span class="text-outline-variant font-code-xs text-code-xs">•</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate">Premier Family Health</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tier 1 Gold Plan • Hospitalization</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface">July 14, 2026</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Medical Center Hospital</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-middle text-right">
+<span class="font-code-sm text-code-sm text-on-surface font-semibold">$3,700.00</span>
+<span class="block font-code-xs text-code-xs text-on-surface-variant">Initial Assessment</span>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<div class="flex flex-col items-start gap-space-3xs">
+<span class="inline-flex items-center gap-space-xs px-space-xs py-space-3xs rounded-full bg-primary-container/20 text-primary font-code-xs text-code-xs font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  SETTLED ($3,450.00)
+                </span>
+<span class="font-code-xs text-code-xs text-on-surface-variant px-space-2xs py-space-3xs rounded bg-surface-container font-mono">
+                  TXN-2026-8812
+                </span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded-full bg-surface-container-high text-on-surface-variant font-code-xs text-code-xs font-semibold flex items-center justify-center">
+                  CA
+                </div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Charlie Adjuster</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">USR-003</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md align-middle text-right">
+<button class="inline-flex items-center gap-space-3xs px-space-sm py-space-xs rounded-md bg-surface-container-high text-on-surface hover:bg-surface-bright hover:text-primary transition-all" type="button">
+<span class="font-body-sm text-body-sm font-medium">View Voucher</span>
+<span class="material-symbols-outlined text-[16px]">receipt_long</span>
+</button>
+</td>
+</tr>
+<!-- ROW 3: Settled Row (CLM-0641) -->
+<tr class="bg-surface-container-lowest/30 hover:bg-surface-container-low transition-colors duration-150">
+<td class="py-space-md px-space-md align-middle">
+<span class="font-code-sm text-code-sm text-on-surface font-medium pl-space-xs">
+                #CLM-0641
+              </span>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">home_work</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-2xs">
+<span class="font-code-xs text-code-xs text-on-surface font-semibold">POL-HOM-882</span>
+<span class="text-outline-variant font-code-xs text-code-xs">•</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate">Homeowners Residential Shield</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Water Damage Infiltration</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface">Feb 03, 2026</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">742 Evergreen Terr, Sector 4</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-middle text-right">
+<span class="font-code-sm text-code-sm text-on-surface font-semibold">$2,750.00</span>
+<span class="block font-code-xs text-code-xs text-on-surface-variant">Initial Assessment</span>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<div class="flex flex-col items-start gap-space-3xs">
+<span class="inline-flex items-center gap-space-xs px-space-xs py-space-3xs rounded-full bg-primary-container/20 text-primary font-code-xs text-code-xs font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  SETTLED ($2,750.00)
+                </span>
+<span class="font-code-xs text-code-xs text-on-surface-variant px-space-2xs py-space-3xs rounded bg-surface-container font-mono">
+                  TXN-2026-4419
+                </span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded-full bg-surface-container-high text-on-surface-variant font-code-xs text-code-xs font-semibold flex items-center justify-center">
+                  DA
+                </div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Dana Admin</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">USR-001</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md align-middle text-right">
+<button class="inline-flex items-center gap-space-3xs px-space-sm py-space-xs rounded-md bg-surface-container-high text-on-surface hover:bg-surface-bright hover:text-primary transition-all" type="button">
+<span class="font-body-sm text-body-sm font-medium">View Voucher</span>
+<span class="material-symbols-outlined text-[16px]">receipt_long</span>
+</button>
+</td>
+</tr>
+<!-- ROW 4: Withdrawn Row (CLM-0419) -->
+<tr class="bg-surface-container-lowest/15 hover:bg-surface-container-low transition-colors duration-150 opacity-70 hover:opacity-100">
+<td class="py-space-md px-space-md align-middle">
+<span class="font-code-sm text-code-sm text-on-surface-variant pl-space-xs">
+                #CLM-0419
+              </span>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">directions_car</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-2xs">
+<span class="font-code-xs text-code-xs text-on-surface-variant font-semibold">POL-AUTO-101</span>
+<span class="text-outline-variant font-code-xs text-code-xs">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium truncate">Comprehensive Vehicle Protection</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Collision &amp; Dent Shield</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface-variant">Nov 19, 2025</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Parking Garage Minor Scratch</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-middle text-right">
+<span class="font-code-sm text-code-sm text-on-surface-variant">$600.00</span>
+<span class="block font-code-xs text-code-xs text-on-surface-variant">Self-Resolved</span>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<span class="inline-flex items-center gap-space-xs px-space-xs py-space-3xs rounded-full bg-surface-container text-on-surface-variant font-code-xs text-code-xs font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                WITHDRAWN BY CLAIMANT
+              </span>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<span class="font-body-sm text-body-sm text-on-surface-variant italic">Unassigned / Closed</span>
+</td>
+<td class="py-space-md px-space-md align-middle text-right">
+<span class="px-space-sm py-space-xs rounded font-label-caps text-label-caps uppercase text-on-surface-variant bg-surface-container-lowest">
+                Archived
+              </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Pagination & Summary Bar -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm px-space-md py-space-sm bg-surface-container-lowest/90 font-body-sm text-body-sm text-on-surface-variant">
+<div>
+        Showing <span class="text-on-surface font-semibold">4 of 4</span> claims across <span class="text-on-surface font-semibold">3</span> active policies
+      </div>
+<div class="flex items-center gap-space-xs font-code-xs text-code-xs text-primary">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span>Realtime Synced to Blockchain Block #819,428 • Latency 12ms</span>
+</div>
+</div>
+</div>
+<!-- Bottom Cryptographic Guarantee Banner -->
+<section class="relative overflow-hidden rounded-xl bg-surface-container-lowest/80 backdrop-blur-md p-space-lg shadow-lg">
+<div class="absolute -left-12 -bottom-12 w-48 h-48 rounded-full bg-primary/10 blur-2xl pointer-events-none"></div>
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md relative z-10">
+<div class="flex items-start gap-space-md max-w-3xl">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center shrink-0 shadow-md text-primary">
+<span class="material-symbols-outlined text-[28px]">verified</span>
+</div>
+<div class="space-y-space-3xs">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">
+            Waterfall Process Guarantee: Every state transition is cryptographically signed and auditable.
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            All claim adjudication records are bound to SHA-256 Merkle proofs, ensuring zero tampering across policyholder, examiner, and treasury layers.
+          </p>
+</div>
+</div>
+<a class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-high text-primary hover:bg-surface-bright font-body-sm text-body-sm font-semibold transition-all whitespace-nowrap shadow-sm shrink-0" href="#">
+<span>Inspect Merkle Root Proof</span>
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</a>
+</div>
+</section>
+</div>
+<script>
+  // Simple filter switching for Segmented Pills
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterButtons = document.querySelectorAll('section button[type="button"]');
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (btn.innerText.includes('All') || btn.innerText.includes('Active') || btn.innerText.includes('Settled') || btn.innerText.includes('Withdrawn')) {
+          filterButtons.forEach(b => {
+            b.classList.remove('bg-surface-container-high', 'text-primary', 'shadow-sm');
+            b.classList.add('text-on-surface-variant');
+          });
+          btn.classList.add('bg-surface-container-high', 'text-primary', 'shadow-sm');
+          btn.classList.remove('text-on-surface-variant');
+        }
+      });
+    });
+  });
+</script></div></main></div></body></html>

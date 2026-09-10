@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal 10: Formal Statutory Claim Denial & Legal Citation Modal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #07090e;
+      color: #f1f5f9;
+      overflow-x: hidden;
+    }
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .crimson-glow-box {
+      box-shadow: 0 0 45px rgba(244, 63, 94, 0.16), 0 20px 40px rgba(0, 0, 0, 0.8), inset 0 0 0 1px rgba(244, 63, 94, 0.28);
+    }
+    .crimson-btn-glow {
+      box-shadow: 0 0 20px rgba(244, 63, 94, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    }
+    .subtle-glass-panel {
+      background: rgba(15, 19, 27, 0.85);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 5px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: rgba(15, 23, 42, 0.6);
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: rgba(244, 63, 94, 0.35);
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="relative min-h-screen bg-[#07090e] text-slate-100 flex flex-col justify-between select-none">
+
+  <!-- Background Base Layout (Simulating Screen 06 Adjudication Studio under high blur) -->
+  <div class="fixed inset-0 pointer-events-none filter blur-md opacity-35 transform scale-102 bg-gradient-to-br from-[#0a0e17] via-[#0b111c] to-[#06080e]">
+    <!-- Ghosted Top Nav -->
+    <div class="w-full border-b border-slate-800/80 px-8 py-4 flex items-center justify-between bg-slate-950/60">
+      <div class="flex items-center space-x-3">
+        <div class="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 font-bold text-xs">AC</div>
+        <span class="font-bold tracking-tight text-white text-base">AegisClaims <span class="text-xs font-mono text-emerald-400/80 uppercase">RUET Enterprise</span></span>
+      </div>
+      <div class="flex items-center space-x-4">
+        <div class="px-3 py-1 bg-slate-900 border border-slate-700/60 rounded-full text-xs font-mono text-slate-300">Charlie Adjuster (Examiner)</div>
+        <div class="w-8 h-8 rounded-full bg-slate-800 border border-slate-700"></div>
+      </div>
+    </div>
+    <!-- Ghosted studio workspace content -->
+    <div class="p-8 max-w-7xl mx-auto grid grid-cols-12 gap-6 mt-4">
+      <div class="col-span-6 h-80 rounded-2xl border border-slate-800 bg-slate-900/50 p-6"></div>
+      <div class="col-span-6 h-80 rounded-2xl border border-slate-800 bg-slate-900/50 p-6"></div>
+      <div class="col-span-12 h-56 rounded-2xl border border-slate-800 bg-slate-900/50 p-6"></div>
+    </div>
+  </div>
+
+  <!-- Deep Obsidian Modal Backdrop with Gradient Vignette -->
+  <div class="fixed inset-0 bg-[#06080f]/80 backdrop-blur-xl z-40 transition-opacity duration-300"></div>
+
+  <!-- Center Modal Container (Max Width 720px) -->
+  <div class="relative z-50 flex items-center justify-center min-h-screen px-4 py-8">
+    <div class="w-full max-w-[720px] subtle-glass-panel rounded-2xl crimson-glow-box border border-rose-500/30 overflow-hidden flex flex-col transition-all shadow-2xl">
+      
+      <!-- Top Neon Status Bar Accent Line -->
+      <div class="h-1 w-full bg-gradient-to-r from-rose-600 via-rose-500 to-amber-500"></div>
+
+      <!-- 1. Modal Header -->
+      <div class="p-6 md:p-7 border-b border-rose-500/15 bg-gradient-to-b from-rose-950/20 to-transparent">
+        <div class="flex items-start justify-between gap-4">
+          <div class="flex items-start gap-3.5">
+            <div class="w-10 h-10 rounded-xl bg-rose-500/10 border border-rose-500/30 flex items-center justify-center shrink-0 shadow-inner">
+              <!-- Warning Gavel / Alert Shield SVG -->
+              <svg class="w-5 h-5 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+            </div>
+            <div>
+              <div class="flex items-center gap-2.5 flex-wrap">
+                <h2 class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
+                  Reject Claim <span class="font-mono text-rose-400">#CLM-1004</span>
+                  <span class="text-slate-400 font-normal text-base">— Derrick Vance</span>
+                </h2>
+              </div>
+              <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+                Enforce statutory rejection and record irrevocable entry in Cryptographic Audit Ledger.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Terminal State Tag & Close Icon -->
+          <div class="flex items-center gap-3">
+            <div class="flex items-center space-x-1.5 px-2.5 py-1 rounded-full bg-rose-500/15 border border-rose-500/35 text-[11px] font-mono text-rose-300 font-semibold tracking-wide">
+              <span class="w-1.5 h-1.5 rounded-full bg-rose-400 animate-pulse"></span>
+              <span>TERMINAL STATE: REJECTED</span>
+            </div>
+            <button class="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800/60 transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- 2. Policy & Incident Context Strip -->
+        <div class="mt-5 grid grid-cols-2 sm:grid-cols-4 gap-2.5 p-3 rounded-xl bg-[#090d15]/80 border border-slate-800/90 text-xs">
+          <div>
+            <div class="text-[10px] uppercase font-mono tracking-wider text-slate-500">Policy Ref</div>
+            <div class="font-mono font-medium text-slate-200 mt-0.5">POL-AUTO-101</div>
+          </div>
+          <div>
+            <div class="text-[10px] uppercase font-mono tracking-wider text-slate-500">Claimed Loss</div>
+            <div class="font-mono font-semibold text-rose-300 mt-0.5">$3,100.00 <span class="text-[10px] text-slate-400 font-sans">USD</span></div>
+          </div>
+          <div>
+            <div class="text-[10px] uppercase font-mono tracking-wider text-slate-500">Incident Domain</div>
+            <div class="font-medium text-slate-200 mt-0.5 flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> Auto Collision
+            </div>
+          </div>
+          <div>
+            <div class="text-[10px] uppercase font-mono tracking-wider text-slate-500">AI Risk Index</div>
+            <div class="font-mono font-bold text-rose-400 mt-0.5 flex items-center gap-1">
+              <svg class="w-3.5 h-3.5 text-rose-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+              </svg>
+              0.89 <span class="text-[10px] font-sans text-rose-300 font-semibold">(High Risk)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Statutory Rejection Form -->
+      <div class="p-6 md:p-7 space-y-5 bg-[#0b0f19]/90 custom-scrollbar max-h-[52vh] overflow-y-auto">
+        
+        <!-- Field 1: Rejection Category Dropdown -->
+        <div>
+          <label class="block text-xs font-medium text-slate-300 mb-1.5">
+            Statutory Rejection Category <span class="text-rose-400 font-mono">*</span>
+          </label>
+          <div class="relative">
+            <select class="w-full bg-[#101522] border border-rose-500/40 focus:border-rose-400 focus:ring-1 focus:ring-rose-500/50 rounded-lg px-3.5 py-2.5 text-xs text-rose-200 font-mono appearance-none outline-none transition-all cursor-pointer">
+              <option value="POLICY_EXCLUSION" selected class="bg-[#0e131f] text-slate-100">
+                POLICY_EXCLUSION — Unendorsed/Unlicensed Operator Clause
+              </option>
+              <option value="INSUFFICIENT_PROOF" class="bg-[#0e131f] text-slate-100">
+                INSUFFICIENT_PROOF — Failure to Furnish Conclusive Telemetry
+              </option>
+              <option value="FRAUD_SUSPICION" class="bg-[#0e131f] text-slate-100">
+                FRAUD_SUSPICION — Telemetry Timestamp & Geolocation Discrepancy
+              </option>
+              <option value="EXPIRED_POLICY" class="bg-[#0e131f] text-slate-100">
+                EXPIRED_POLICY — Lapsed Coverage Term at Point of Loss
+              </option>
+              <option value="PRE_EXISTING_DAMAGE" class="bg-[#0e131f] text-slate-100">
+                PRE_EXISTING_DAMAGE — CV Computer Vision Historical Rust Infiltration
+              </option>
+            </select>
+            <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-rose-400">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </div>
+          <p class="text-[11px] text-slate-400 mt-1">Classifies regulatory reporting for the RUET Solvency & Insurance Commission.</p>
+        </div>
+
+        <!-- Field 2: Contractual Clause Citation -->
+        <div>
+          <label class="block text-xs font-medium text-slate-300 mb-1.5 flex items-center justify-between">
+            <span>Contractual Clause Citation <span class="text-rose-400 font-mono">*</span></span>
+            <span class="font-mono text-[10px] text-slate-400">VERIFIED FROM SMART CLAUSE REPOSITORY</span>
+          </label>
+          <div class="relative">
+            <input 
+              type="text" 
+              value="Section 4.2.b — Exclusion of Damage Occurred During Unlicensed Operation" 
+              class="w-full bg-[#101522] border border-slate-700/80 focus:border-rose-400/80 focus:ring-1 focus:ring-rose-400/40 rounded-lg px-3.5 py-2.5 text-xs font-mono text-rose-300 tracking-tight outline-none"
+            />
+            <div class="absolute right-2.5 top-2.5">
+              <span class="px-2 py-0.5 rounded bg-rose-500/20 text-rose-300 text-[10px] font-mono border border-rose-500/30">LOCKED ID</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Field 3: Examiner Legal Justification & Findings -->
+        <div>
+          <label class="block text-xs font-medium text-slate-300 mb-1.5 flex items-center justify-between">
+            <span>Examiner Legal Justification & Findings <span class="text-rose-400 font-mono">*</span></span>
+            <span class="text-[11px] font-mono text-slate-400">412 / 1000 CHARS</span>
+          </label>
+          <textarea 
+            rows="4" 
+            class="w-full bg-[#101522] border border-slate-700/80 focus:border-rose-400/80 focus:ring-1 focus:ring-rose-400/40 rounded-lg p-3 text-xs text-slate-200 leading-relaxed font-sans outline-none resize-none font-normal"
+          >Incident evidence submitted contradicts official Rajshahi Metropolitan Police Report #RMP-2026-9014. Telematics CAN-bus sensor velocity logs confirm unendorsed operator Derrick Vance was driving without authenticated Class-C licensure at 02:18 EST. Under binding RUET statutory insurance covenant Clause 4.2.b, all third-party and structural indemnification obligations are wholly excluded and nullified from coverage.</textarea>
+          <div class="mt-1.5 flex items-center gap-2 text-[11px] text-slate-400">
+            <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+            <span>Cross-referenced with Telematics Hash: <span class="font-mono text-slate-300">0x8f4b2...verified</span></span>
+          </div>
+        </div>
+
+        <!-- Field 4: Claimant Rights & Statutory Appeal Protocol -->
+        <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 flex items-start gap-3">
+          <input 
+            type="checkbox" 
+            id="statutory-notice" 
+            checked 
+            class="mt-0.5 h-4 w-4 rounded bg-slate-950 border-rose-500/60 text-rose-600 focus:ring-rose-500 focus:ring-offset-slate-900 cursor-pointer accent-rose-500"
+          >
+          <label for="statutory-notice" class="text-xs text-slate-300 leading-relaxed cursor-pointer">
+            <span class="font-medium text-white block">Include 30-day statutory arbitration & grievance protocol</span>
+            Transmit formal certified denial notice to claimant with appellate filing instructions under Bangladesh Insurance Act statutory regulations.
+          </label>
+        </div>
+
+        <!-- 4. Immutable Ledger Warning Container -->
+        <div class="p-3.5 rounded-xl bg-gradient-to-r from-rose-950/40 via-[#16131f] to-rose-950/20 border border-rose-500/30 flex items-center gap-3.5">
+          <div class="w-8 h-8 rounded-lg bg-rose-500/20 border border-rose-500/40 flex items-center justify-center shrink-0 text-rose-300">
+            <!-- Tamper Lock SVG -->
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <div class="text-[11px] leading-snug">
+            <span class="font-semibold text-rose-200 block">Cryptographic State Enforcement Notice</span>
+            <span class="text-slate-300">This action will permanently seal Claim <strong class="font-mono text-rose-300">#CLM-1004</strong> as <strong class="text-rose-400">REJECTED</strong>. State transitions are irrevocably written to Merkle block and cannot be reverted without executive governance override.</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 5. Action Footer -->
+      <div class="p-5 md:p-6 border-t border-slate-800 bg-[#090d16] flex flex-col-reverse sm:flex-row items-center justify-between gap-3">
+        <button class="w-full sm:w-auto px-4 py-2.5 rounded-lg text-xs font-medium text-slate-400 hover:text-slate-200 hover:bg-slate-800/80 border border-slate-700/60 transition-colors flex items-center justify-center gap-1.5">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+          </svg>
+          Cancel & Return to Studio
+        </button>
+
+        <div class="flex items-center gap-3 w-full sm:w-auto justify-end">
+          <span class="hidden md:inline font-mono text-[10px] text-slate-500">AUTH: CHARLIE (USR-402)</span>
+          <button class="w-full sm:w-auto px-5 py-2.5 rounded-lg bg-gradient-to-r from-rose-600 via-rose-500 to-rose-700 hover:from-rose-500 hover:to-rose-600 text-white text-xs font-semibold font-sans tracking-wide crimson-btn-glow border border-rose-400/50 flex items-center justify-center gap-2 transition-all cursor-pointer">
+            <!-- Glowing Lock Icon -->
+            <svg class="w-3.5 h-3.5 text-rose-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+            Authorize Rejection & Seal Ledger
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Micro Footer Compliance Watermark -->
+  <div class="relative z-50 pb-4 text-center text-[11px] font-mono text-slate-600">
+    RUET Enterprise Adjudication Engine • ISO/IEC 27001 & SOC-2 Type II Cryptographic Enclave
+  </div>
+
+</body>
+</html>
