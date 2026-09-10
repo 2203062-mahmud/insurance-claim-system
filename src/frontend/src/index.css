@@ -1,3 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #070A0F;
+  --color-surface: #131B2A;
+  --color-emerald: #10B981;
+  --color-cyan: #38BDF8;
+  --color-amber: #F59E0B;
+  --color-crimson: #F43F5E;
+}
+
 :root {
   --text: #6b6375;
   --text-h: #08060d;
