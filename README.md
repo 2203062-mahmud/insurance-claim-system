@@ -39,6 +39,13 @@ insurance-claim-system/
 │   ├── backend/                         # Express + TypeScript REST API server
 │   └── frontend/                        # React 19 + TypeScript + Vite web client
 │
+├── ui-designs/                          # High-fidelity Stitch UI prototypes & Design System
+│   ├── design-system/                   # Luminous Obsidian & Emerald Treasury tokens
+│   ├── 00_global_auth/                  # Login portal & Viva demo controller dock
+│   ├── 01_policyholder_intake/          # Policies, portfolio table, intake wizard & tracker
+│   ├── 02_claims_adjudication/          # Adjuster queue, 50/50 loss studio & denial modal
+│   └── 03_governance_settlement/        # Treasury ledger, disbursement voucher & audit drawer
+│
 ├── assets/                              # Architecture diagrams, logos, and UI assets
 │
 └── screenshots/                         # Working MVP prototype verification screenshots
@@ -84,4 +91,4 @@ npm run dev
 - [ ] 3 Pull Requests reviewed and merged into `main`
 - [ ] Functional MVP demonstrating Core Workflow (Submit $\rightarrow$ Review $\rightarrow$ Approve/Reject $\rightarrow$ Settle)
 - [ ] 16-Section Project Design Report PDF placed in `docs/Requirement_Report.pdf`
-- [ ] Working prototype screenshots in `screenshots/`
+- [x] Working prototype screenshots in `screenshots/`
