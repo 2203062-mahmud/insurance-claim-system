@@ -19,6 +19,8 @@ To ensure complete clarity and eliminate any ambiguity during development and ev
    *Detailed task dossiers for all 3 members: equal fullstack subsystem ownership, Git branches, PR review matrix, commit conventions, owned report sections, and viva defense questions.*
 3. 🏛️ **[PROJECT_ARCHITECTURE_AND_WORKFLOW.md](./PROJECT_ARCHITECTURE_AND_WORKFLOW.md)**  
    *Full system architecture, TypeScript data models, frozen REST API contracts, end-to-end claim lifecycle state machine, frontend/backend directory layout, and verification steps.*
+4. 🛡️ **[COLLABORATION_AND_MERGE_PROTOCOL.md](./COLLABORATION_AND_MERGE_PROTOCOL.md)**  
+   *The team's conflict-free Git collaboration guide: strict subsystem file boundaries, shared shell patterns, SQLite standard, and pre-PR checklists to guarantee zero merge conflicts.*
 
 ---
 
