@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import './App.css';
+import ClaimantPortal from './components/claimant/ClaimantPortal';
 
 // Placeholder components - Members will replace these with their actual imports!
-const ClaimantPortal = () => <div className="p-8"><h2>Claimant Portal (Member 1)</h2><p>Policyholder views go here.</p></div>;
 const AdjusterPortal = () => <div className="p-8"><h2>Adjuster Workspace (Member 2)</h2><p>Claims queue and adjudication go here.</p></div>;
 const AdminPortal = () => <div className="p-8"><h2>Governance & Admin (Member 3)</h2><p>Settlement and analytics go here.</p></div>;
 
