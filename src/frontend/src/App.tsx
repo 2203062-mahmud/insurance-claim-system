@@ -15,7 +15,7 @@ function App() {
       
       <main className="w-full pt-28 bg-background relative min-h-screen">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(16,185,129,0.08),transparent_65%)] pointer-events-none"></div>
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-grid-margin-desktop">
+        <div className="relative z-10 w-full px-grid-margin-desktop">
           <div className="flex flex-col w-full pb-space-3xl">
             {activeTab === 'CLAIMANT' && <ClaimantPortal />}
             {activeTab === 'ADJUSTER' && <AdjusterPortal />}
