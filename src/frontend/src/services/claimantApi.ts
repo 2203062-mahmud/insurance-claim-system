@@ -1,4 +1,4 @@
-const API = "http://localhost:4000/api";
+const API = "http://localhost:5000/api";
 
 export async function getPolicies() {
   const res = await fetch(`${API}/policies`);

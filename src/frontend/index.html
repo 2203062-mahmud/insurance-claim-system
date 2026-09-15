@@ -1,10 +1,42 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>frontend</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Plus Jakarta Sans', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            colors: {
+              obsidian: {
+                900: '#090D14', // Void Obsidian
+                800: '#0D131F', // Deep Obsidian
+                700: '#131D2E', // Elevated Obsidian
+              },
+              slate: {
+                950: '#020617',
+                900: '#0f172a',
+                850: '#151f32',
+                800: '#1e293b',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body { background-color: #090D14; color: #f8fafc; }
+    </style>
   </head>
   <body>
     <div id="root"></div>
