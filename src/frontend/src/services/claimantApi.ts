@@ -33,3 +33,16 @@ export async function withdrawClaimApi(claimId: string) {
   }
   return res.json();
 }
+
+export async function createPolicyApi(payload: any) {
+  const res = await fetch(`${API}/policies`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  });
+  if (!res.ok) {
+    const errorData = await res.json();
+    throw new Error(errorData.details || 'Failed to create policy');
+  }
+  return res.json();
+}

@@ -13,14 +13,18 @@ export const store = {
 
   getPolicies: () => policies,
   getPolicyById: (id: string) => policies.find(p => p.id === id),
+  addPolicy: (policy: Policy) => {
+    policies.push(policy);
+    return policy;
+  },
 
   getClaims: () => claims,
   getClaimById: (id: string) => claims.find(c => c.id === id),
-  updateClaim: (id: string, updates: Partial<Claim>) => {
-    const claim = claims.find(c => c.id === id);
-    if (!claim) return undefined;
-    Object.assign(claim, updates, { updatedAt: new Date().toISOString() });
-    return claim;
+  updateClaim: (claim: Claim) => {
+    const idx = claims.findIndex(c => c.id === claim.id);
+    if (idx !== -1) {
+      claims[idx] = claim;
+    }
   },
   addClaim: (claim: Claim) => {
     claims.push(claim);
