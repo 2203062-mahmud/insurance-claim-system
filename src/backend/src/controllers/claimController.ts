@@ -10,7 +10,6 @@ export function submitClaim(req: Request, res: Response) {
     return res.status(404).json({ error: 'Validation Error', details: 'Policy not found' });
   }
 
-  // Assuming claimant ID is passed or mocked. For MVP we can just check policy exists and is active.
   if (policy.status !== 'ACTIVE') {
     return res.status(422).json({ error: 'Validation Error', details: 'Policy is not active' });
   }
@@ -33,24 +32,29 @@ export function submitClaim(req: Request, res: Response) {
 
   const claim: Claim = {
     id: newClaimId,
+    claimNumber: `CLAIM-2026-${(claimCount + 1).toString().padStart(3, '0')}`,
     policyId: policy.id,
+    policyholderId: 'USR-001',
+    policyholderName: 'Alice Johnson',
     policyType: policy.type,
-    claimantId: policy.policyholderId,
     incidentDate,
-    incidentDescription,
-    claimedAmount,
-    status: 'SUBMITTED',
     submissionDate: new Date().toISOString(),
-    evidenceUrls: evidenceUrls || []
+    claimedAmount,
+    incidentLocation: 'Unknown',
+    description: incidentDescription,
+    evidenceUrls: evidenceUrls || [],
+    status: 'SUBMITTED',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
   };
 
   store.addClaim(claim);
 
   store.addAuditEntry({
     claimId: claim.id,
-    actorId: claim.claimantId,
+    actorId: claim.policyholderId,
     actorName: 'Policyholder',
-    actorRole: 'CLAIMANT',
+    actorRole: 'POLICYHOLDER',
     action: 'CLAIM_SUBMITTED',
     previousState: 'NONE',
     newState: 'SUBMITTED',
@@ -61,9 +65,7 @@ export function submitClaim(req: Request, res: Response) {
 }
 
 export function getMyClaims(req: Request, res: Response) {
-  // For demo, return all claims for a hardcoded user or all claims if not specified.
-  // In a real app, this would use req.user.id
   const claimantId = req.query.claimantId as string || 'USR-001';
-  const claims = store.getClaims().filter(c => c.claimantId === claimantId);
+  const claims = store.getClaims().filter(c => c.policyholderId === claimantId);
   res.json(claims);
 }
