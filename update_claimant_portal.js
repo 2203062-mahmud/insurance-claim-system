@@ -1,4 +1,6 @@
+const fs = require('fs');
 
+const portalTemplate = `
 import React, { useState, useEffect } from 'react';
 import { getPolicies, getMyClaims, submitClaim } from '../../services/claimantApi';
 
@@ -79,7 +81,7 @@ export default function ClaimantPortal() {
           <div className="bg-surface-container-low rounded-xl p-space-md shadow-md flex items-center justify-between group hover:bg-surface-container transition-all">
             <div>
               <span className="font-label-caps text-label-caps text-on-surface-variant block mb-space-3xs">PROTECTION CAP</span>
-              <div className="font-metric-display text-metric-display text-on-surface tracking-tight">${policies.reduce((sum, p) => sum + (p.coverageLimit || 0), 0).toLocaleString()}</div>
+              <div className="font-metric-display text-metric-display text-on-surface tracking-tight">\${policies.reduce((sum, p) => sum + (p.coverageLimit || 0), 0).toLocaleString()}</div>
               <span className="font-code-xs text-code-xs text-secondary flex items-center gap-1 mt-space-3xs">
                 <span className="material-symbols-outlined text-[14px]">lock</span> Solvency Reserved
               </span>
@@ -144,8 +146,8 @@ export default function ClaimantPortal() {
                 </div>
                 <div className="text-left md:text-right">
                   <span className="font-label-caps text-label-caps text-on-surface-variant block">COVERAGE CEILING</span>
-                  <span className="font-metric-display text-metric-display text-primary">${(p.coverageLimit || 0).toLocaleString()}</span>
-                  <span className="font-code-xs text-code-xs text-on-surface-variant block">Deductible: ${(p.deductible || 0).toLocaleString()}</span>
+                  <span className="font-metric-display text-metric-display text-primary">\${(p.coverageLimit || 0).toLocaleString()}</span>
+                  <span className="font-code-xs text-code-xs text-on-surface-variant block">Deductible: \${(p.deductible || 0).toLocaleString()}</span>
                 </div>
               </div>
 
@@ -186,11 +188,11 @@ export default function ClaimantPortal() {
                 <div key={c.id} className="p-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors border border-outline-variant/10 cursor-pointer group">
                   <div className="flex items-center justify-between mb-1">
                     <span className="font-code-xs text-code-xs text-on-surface tracking-wider group-hover:text-primary transition-colors">{c.id}</span>
-                    <span className={`font-code-xs text-code-xs px-1.5 py-0.5 rounded uppercase ${c.status === 'SUBMITTED' ? 'bg-secondary/10 text-secondary' : 'bg-primary/10 text-primary'}`}>{c.status}</span>
+                    <span className={\`font-code-xs text-code-xs px-1.5 py-0.5 rounded uppercase \${c.status === 'SUBMITTED' ? 'bg-secondary/10 text-secondary' : 'bg-primary/10 text-primary'}\`}>{c.status}</span>
                   </div>
                   <div className="flex items-center justify-between font-code-xs text-code-xs text-on-surface-variant">
                     <span>{c.incidentDate}</span>
-                    <span className="font-semibold">${(c.claimedAmount || 0).toLocaleString()}</span>
+                    <span className="font-semibold">\${(c.claimedAmount || 0).toLocaleString()}</span>
                   </div>
                 </div>
               ))}
@@ -229,7 +231,7 @@ export default function ClaimantPortal() {
                 <label className="font-label-caps text-label-caps text-on-surface-variant block mb-space-3xs">SELECT AFFECTED POLICY</label>
                 <select value={policyId} onChange={e => setPolicyId(e.target.value)} required className="w-full h-10 px-space-sm rounded bg-surface-container text-on-surface font-body-sm text-body-sm border border-outline-variant/40 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary">
                   <option value="">-- Choose a Policy --</option>
-                  {policies.map(p => <option key={p.id} value={p.id}>{p.id} - {p.title} (Limit: ${(p.coverageLimit || 0).toLocaleString()})</option>)}
+                  {policies.map(p => <option key={p.id} value={p.id}>{p.id} - {p.title} (Limit: \${(p.coverageLimit || 0).toLocaleString()})</option>)}
                 </select>
               </div>
               
@@ -266,3 +268,7 @@ export default function ClaimantPortal() {
     </div>
   );
 }
+`;
+
+fs.writeFileSync('src/frontend/src/components/claimant/ClaimantPortal.tsx', portalTemplate);
+console.log('ClaimantPortal synced with HTML design');
