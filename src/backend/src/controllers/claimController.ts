@@ -69,3 +69,30 @@ export function getMyClaims(req: Request, res: Response) {
   const claims = store.getClaims().filter(c => c.policyholderId === claimantId);
   res.json(claims);
 }
+
+export function withdrawClaim(req: Request, res: Response) {
+  const { id } = req.params;
+  const claim = store.getClaimById(id);
+  if (!claim) return res.status(404).json({ error: 'Not Found' });
+
+  if (claim.status !== 'SUBMITTED') {
+    return res.status(422).json({ error: 'Validation Error', details: 'Can only withdraw claims in SUBMITTED state' });
+  }
+
+  claim.status = 'WITHDRAWN';
+  claim.updatedAt = new Date().toISOString();
+  store.updateClaim(claim);
+
+  store.addAuditEntry({
+    claimId: claim.id,
+    actorId: claim.policyholderId,
+    actorName: 'Policyholder',
+    actorRole: 'POLICYHOLDER',
+    action: 'CLAIM_WITHDRAWN',
+    previousState: 'SUBMITTED',
+    newState: 'WITHDRAWN',
+    remarks: 'Claim withdrawn by policyholder'
+  });
+
+  res.json(claim);
+}

@@ -22,3 +22,14 @@ export async function submitClaim(payload: any) {
   }
   return res.json();
 }
+
+export async function withdrawClaimApi(claimId: string) {
+  const res = await fetch(`${API}/claims/${claimId}/withdraw`, {
+    method: 'PATCH',
+  });
+  if (!res.ok) {
+    const errorData = await res.json();
+    throw new Error(errorData.details || 'Failed to withdraw claim');
+  }
+  return res.json();
+}
