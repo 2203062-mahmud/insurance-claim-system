@@ -13,10 +13,20 @@ export const store = {
 
   getPolicies: () => policies,
   getPolicyById: (id: string) => policies.find(p => p.id === id),
+  addPolicy: (policy: Policy) => {
+    policies.push(policy);
+    return policy;
+  },
 
   getClaims: () => claims,
   getClaimById: (id: string) => claims.find(c => c.id === id),
-  updateClaim: (id: string, updates: Partial<Claim>) => {
+  updateClaim: (claim: Claim) => {
+    const idx = claims.findIndex(c => c.id === claim.id);
+    if (idx !== -1) {
+      claims[idx] = claim;
+    }
+  },
+  updateClaimPartial: (id: string, updates: Partial<Claim>) => {
     const claim = claims.find(c => c.id === id);
     if (!claim) return undefined;
     Object.assign(claim, updates, { updatedAt: new Date().toISOString() });
@@ -30,7 +40,7 @@ export const store = {
   addAuditEntry: (entry: Omit<AuditEntry, 'logId' | 'timestamp'>) => {
     const full: AuditEntry = {
       ...entry,
-      logId: `LOG-${5000 + logCounter++}`,
+      logId: \`LOG-\${5000 + logCounter++}\`,
       timestamp: new Date().toISOString(),
     };
     auditLog.push(full);

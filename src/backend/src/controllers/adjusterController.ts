@@ -25,7 +25,7 @@ export function assignClaim(req: Request, res: Response) {
     return res.status(422).json({ error: 'Validation Error', details: 'Claim is not in SUBMITTED state' });
   }
 
-  const updated = store.updateClaim(id, {
+  const updated = store.updateClaimPartial(id, {
     status: 'UNDER_REVIEW',
     assignedAdjusterId: adjusterId,
   });
@@ -72,7 +72,7 @@ export function adjudicateClaim(req: Request, res: Response) {
       return res.status(422).json({ error: 'Validation Error', details: 'approvedAmount cannot exceed assessedLoss' });
     }
 
-    const updated = store.updateClaim(id, {
+    const updated = store.updateClaimPartial(id, {
       status: 'APPROVED',
       assessedLoss,
       approvedAmount,
@@ -100,7 +100,7 @@ export function adjudicateClaim(req: Request, res: Response) {
       return res.status(422).json({ error: 'Validation Error', details: 'rejectionReason is required' });
     }
 
-    const updated = store.updateClaim(id, {
+    const updated = store.updateClaimPartial(id, {
       status: 'REJECTED',
       rejectionReason,
       rejectionCategory,
