@@ -4,7 +4,8 @@ export const seedUsers: User[] = [
   {
     id: 'USR-001', name: 'Alice Johnson', email: 'alice@ruet.ac.bd',
     role: 'POLICYHOLDER', phone: '01700000001',
-    policyIds: ['POL-AUTO-101'], createdAt: '2026-01-01T00:00:00Z',
+    policyIds: ['POL-AUTO-101', 'POL-HLTH-202', 'POL-HOME-303'], 
+    createdAt: '2026-01-01T00:00:00Z',
   },
   {
     id: 'USR-003', name: 'Charlie Miller', email: 'charlie@ruet.ac.bd',
@@ -24,6 +25,20 @@ export const seedPolicies: Policy[] = [
     title: 'Comprehensive Vehicle Protection',
     description: 'Covers collision, theft, and third-party damage.',
     coverageLimit: 25000, deductible: 500, premiumAmount: 1200,
+    startDate: '2026-01-01', endDate: '2027-01-01', status: 'ACTIVE',
+  },
+  {
+    id: 'POL-HLTH-202', policyNumber: 'PN-2026-5544', type: 'HEALTH',
+    title: 'Family Health Protection Tier 1',
+    description: 'Covers emergency medical, hospitalization, and surgical costs.',
+    coverageLimit: 150000, deductible: 1000, premiumAmount: 4500,
+    startDate: '2026-01-01', endDate: '2027-01-01', status: 'ACTIVE',
+  },
+  {
+    id: 'POL-HOME-303', policyNumber: 'PN-2026-1122', type: 'HOME',
+    title: 'Homeowners Shield (All-Risk)',
+    description: 'Covers fire, theft, and natural disaster structural damage.',
+    coverageLimit: 350000, deductible: 2500, premiumAmount: 1800,
     startDate: '2026-01-01', endDate: '2027-01-01', status: 'ACTIVE',
   },
 ];
