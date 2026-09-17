@@ -40,6 +40,7 @@ export const store = {
     auditLog.push(full);
     return full;
   },
+  getAllAuditTrails: () => auditLog,
   getAuditTrail: (claimId: string) => auditLog.filter(a => a.claimId === claimId),
 
   resetToSeed: () => {

@@ -3,6 +3,7 @@ import cors from 'cors';
 import { PORT } from './config.js';
 import policyRoutes from './routes/policyRoutes.js';
 import claimRoutes from './routes/claimRoutes.js';
+import governanceRoutes from './routes/governanceRoutes.js';
 
 const app = express();
 app.use(cors());
@@ -14,6 +15,7 @@ app.get('/api/system/health', (req, res) => {
 
 app.use('/api/policies', policyRoutes);
 app.use('/api/claims', claimRoutes);
+app.use('/api', governanceRoutes);
 
 app.listen(PORT, () => {
   console.log(`Running on http://localhost:${PORT}`);

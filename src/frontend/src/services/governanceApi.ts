@@ -1,4 +1,4 @@
-const API = "http://localhost:4000/api";
+const API = "http://localhost:5000/api";
 
 export async function getAnalytics() {
   const response = await fetch(
@@ -46,5 +46,14 @@ export async function resetSeed() {
     }
   );
 
+  return response.json();
+}
+export async function getAllClaims() {
+  const response = await fetch(`${API}/claims`);
+  return response.json();
+}
+
+export async function getAllAuditLogs() {
+  const response = await fetch(`${API}/audit-logs`);
   return response.json();
 }
