@@ -26,6 +26,12 @@ export const store = {
       claims[idx] = claim;
     }
   },
+  updateClaimPartial: (id: string, updates: Partial<Claim>) => {
+    const claim = claims.find(c => c.id === id);
+    if (!claim) return undefined;
+    Object.assign(claim, updates, { updatedAt: new Date().toISOString() });
+    return claim;
+  },
   addClaim: (claim: Claim) => {
     claims.push(claim);
     return claim;
@@ -34,7 +40,7 @@ export const store = {
   addAuditEntry: (entry: Omit<AuditEntry, 'logId' | 'timestamp'>) => {
     const full: AuditEntry = {
       ...entry,
-      logId: `LOG-${5000 + logCounter++}`,
+      logId: \`LOG-\${5000 + logCounter++}\`,
       timestamp: new Date().toISOString(),
     };
     auditLog.push(full);
