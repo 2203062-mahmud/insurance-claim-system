@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getAnalytics, resetSeed } from "../../services/governanceApi";
+import { getAnalytics, resetSeed, getAllClaims, getAllAuditLogs, disburseClaim } from "../../services/governanceApi";
 
 import KPICard from "../../components/governance/KPICard";
 import AuditTimeline from "../../components/governance/AuditTimeline";
@@ -25,10 +25,20 @@ type Analytics = {
 
 function GovernanceDashboard() {
   const [data, setData] = useState<Analytics | null>(null);
+  const [claimsList, setClaimsList] = useState<any[]>([]);
+  const [auditLogs, setAuditLogs] = useState<any[]>([]);
 
   const loadData = async () => {
-    const result = await getAnalytics();
-    setData(result);
+    try {
+      const result = await getAnalytics();
+      setData(result);
+      const claimsData = await getAllClaims();
+      setClaimsList(claimsData);
+      const logsData = await getAllAuditLogs();
+      setAuditLogs(logsData);
+    } catch (e) {
+      console.error(e);
+    }
   };
 
   useEffect(() => {
@@ -41,148 +51,108 @@ function GovernanceDashboard() {
   };
 
   if (!data) {
-    return <h2 style={{ padding: "30px" }}>Loading...</h2>;
+    return (
+      <div className="flex items-center justify-center min-h-[50vh]">
+        <div className="w-12 h-12 border-4 border-primary/30 border-t-primary rounded-full animate-spin"></div>
+      </div>
+    );
   }
 
   return (
-    <div
-      style={{
-        padding: "30px",
-        fontFamily: "Arial",
-        background: "#f5f7fa",
-        minHeight: "100vh",
-      }}
-    >
+    <div className="animate-fade-in w-full pb-space-2xl">
       {/* Header */}
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
-        <div>
-          <h1>Insurance Claim Governance Dashboard</h1>
-
-          <p style={{ color: "#666" }}>
-            Monitor claims, audits and settlement activities
+      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-space-md mb-space-xl">
+        <div className="space-y-space-2xs">
+          <div className="flex items-center gap-space-xs">
+            <span className="w-2.5 h-2.5 rounded-full bg-primary animate-ping"></span>
+            <span className="font-code-xs text-code-xs text-primary font-semibold tracking-wider uppercase">Executive Overview</span>
+          </div>
+          <h1 className="font-headline-xl text-headline-xl text-on-surface tracking-tight">Governance & Settlement</h1>
+          <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+            Global operational overview of actuarial risk, claim adjudication status, and corporate treasury disbursements.
           </p>
         </div>
-
-        <button onClick={handleReset}>
-          Reset Demo Data
+        
+        <button onClick={handleReset} className="px-space-md py-space-xs rounded-lg bg-surface-container-high text-on-surface font-body-sm font-semibold hover:bg-surface-container-highest transition-all flex items-center gap-2 border border-outline-variant/30">
+          <span className="material-symbols-outlined text-[18px]">restart_alt</span>
+          Reset Global Data
         </button>
       </div>
 
-      <hr />
-
       {/* KPI Cards */}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(5, 1fr)",
-          gap: "15px",
-          marginTop: "25px",
-        }}
-      >
-        <KPICard
-          title="Total Claims"
-          value={data.totalClaims}
-        />
-
-        <KPICard
-          title="Pending Review"
-          value={data.pendingReviewCount}
-        />
-
-        <KPICard
-          title="Approved"
-          value={data.approvedCount}
-        />
-
-        <KPICard
-          title="Rejected"
-          value={data.rejectedCount}
-        />
-
-        <KPICard
-          title="Settled"
-          value={data.settledCount}
-        />
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-md mb-space-xl">
+        <KPICard title="Total Claims" value={data.totalClaims} icon="receipt_long" />
+        <KPICard title="Pending Review" value={data.pendingReviewCount} icon="pending_actions" colorClass="text-secondary" />
+        <KPICard title="Approved" value={data.approvedCount} icon="check_circle" colorClass="text-primary" />
+        <KPICard title="Rejected" value={data.rejectedCount} icon="cancel" colorClass="text-error" />
+        <KPICard title="Settled" value={data.settledCount} icon="account_balance_wallet" colorClass="text-[#3b82f6]" />
       </div>
 
       {/* Financial Overview + Claims by Category */}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: "20px",
-          marginTop: "25px",
-        }}
-      >
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-space-lg mb-space-xl">
         {/* Financial Overview */}
-        <div style={cardStyle}>
-          <h2>Financial Overview</h2>
-
-          <p>
-            <b>Total Claimed:</b>{" "}
-            ${data.totalClaimedValue.toLocaleString()}
-          </p>
-
-          <p>
-            <b>Total Disbursed:</b>{" "}
-            ${data.totalDisbursedValue.toLocaleString()}
-          </p>
-
-          <p>
-            <b>Average Turnaround:</b>{" "}
-            {data.averageTurnaroundHours} hours
-          </p>
+        <div className="bg-surface-container-low rounded-xl p-space-lg shadow-lg border border-outline-variant/20">
+          <h2 className="font-headline-sm text-headline-sm text-on-surface mb-space-md flex items-center gap-2">
+            <span className="material-symbols-outlined text-primary">account_balance</span>
+            Corporate Treasury Overview
+          </h2>
+          <div className="space-y-space-sm">
+            <div className="flex justify-between items-center p-space-sm bg-surface-container rounded-lg">
+              <span className="font-code-sm text-code-sm text-on-surface-variant">Gross Claimed Value</span>
+              <span className="font-metric-display text-[24px] text-on-surface">${data.totalClaimedValue.toLocaleString()}</span>
+            </div>
+            <div className="flex justify-between items-center p-space-sm bg-surface-container rounded-lg">
+              <span className="font-code-sm text-code-sm text-on-surface-variant">Total Funds Disbursed</span>
+              <span className="font-metric-display text-[24px] text-primary">${data.totalDisbursedValue.toLocaleString()}</span>
+            </div>
+            <div className="flex justify-between items-center p-space-sm bg-surface-container rounded-lg">
+              <span className="font-code-sm text-code-sm text-on-surface-variant">Global Turnaround Target</span>
+              <span className="font-code-sm text-code-sm text-on-surface">{data.averageTurnaroundHours} Hours</span>
+            </div>
+          </div>
         </div>
 
         {/* Claims by Category */}
-        <div style={cardStyle}>
-          <h2>Claims by Category</h2>
-
-          <p>AUTO: {data.claimsByCategory.AUTO}</p>
-          <p>HEALTH: {data.claimsByCategory.HEALTH}</p>
-          <p>HOME: {data.claimsByCategory.HOME}</p>
-          <p>LIFE: {data.claimsByCategory.LIFE}</p>
+        <div className="bg-surface-container-low rounded-xl p-space-lg shadow-lg border border-outline-variant/20">
+          <h2 className="font-headline-sm text-headline-sm text-on-surface mb-space-md flex items-center gap-2">
+            <span className="material-symbols-outlined text-secondary">pie_chart</span>
+            Actuarial Distribution
+          </h2>
+          <div className="grid grid-cols-2 gap-space-sm">
+            <div className="p-space-sm bg-surface-container rounded-lg flex flex-col">
+              <span className="font-label-caps text-label-caps text-on-surface-variant mb-1">AUTO PORTFOLIO</span>
+              <span className="font-metric-display text-[24px] text-on-surface">{data.claimsByCategory.AUTO}</span>
+            </div>
+            <div className="p-space-sm bg-surface-container rounded-lg flex flex-col">
+              <span className="font-label-caps text-label-caps text-on-surface-variant mb-1">HEALTH PORTFOLIO</span>
+              <span className="font-metric-display text-[24px] text-on-surface">{data.claimsByCategory.HEALTH}</span>
+            </div>
+            <div className="p-space-sm bg-surface-container rounded-lg flex flex-col">
+              <span className="font-label-caps text-label-caps text-on-surface-variant mb-1">HOME PORTFOLIO</span>
+              <span className="font-metric-display text-[24px] text-on-surface">{data.claimsByCategory.HOME}</span>
+            </div>
+            <div className="p-space-sm bg-surface-container rounded-lg flex flex-col">
+              <span className="font-label-caps text-label-caps text-on-surface-variant mb-1">LIFE PORTFOLIO</span>
+              <span className="font-metric-display text-[24px] text-on-surface">{data.claimsByCategory.LIFE}</span>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* Audit Timeline + Settlement Table */}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 2fr",
-          gap: "20px",
-          marginTop: "25px",
-        }}
-      >
-        {/* Audit Timeline */}
-        <div style={cardStyle}>
-          <AuditTimeline logs={[]} />
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-space-lg">
+        {/* Settlement Table (Takes up 2/3 space) */}
+        <div className="lg:col-span-2 bg-surface-container-low rounded-xl p-space-lg shadow-lg border border-outline-variant/20">
+          <SettlementTable claims={claimsList} onDisburse={async (id) => { await disburseClaim(id, "Wire Transfer"); loadData(); }} />
         </div>
-
-        {/* Settlement Table */}
-        <div style={cardStyle}>
-          <SettlementTable
-            claims={[]}
-            onDisburse={() => {}}
-          />
+        
+        {/* Audit Timeline (Takes up 1/3 space) */}
+        <div className="bg-surface-container-low rounded-xl p-space-lg shadow-lg border border-outline-variant/20 max-h-[600px] overflow-y-auto custom-scrollbar">
+          <AuditTimeline logs={auditLogs} />
         </div>
       </div>
     </div>
   );
 }
 
-const cardStyle = {
-  background: "#ffffff",
-  padding: "20px",
-  borderRadius: "10px",
-  boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
-};
-
 export default GovernanceDashboard;
-
